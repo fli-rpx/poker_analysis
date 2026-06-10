@@ -1,0 +1,49 @@
+{
+  "snapshots": [
+    {
+      "date": "2026-06-10",
+      "junk_pct": 57,
+      "junk_showdown_win_rate": 8,
+      "high_pp_win_rate": 65,
+      "high_pp_volume": 2,
+      "overall_showdown_win_rate": 18,
+      "total_hands": 7953
+    },
+    {
+      "date": "2026-06-09",
+      "junk_pct": 57,
+      "junk_showdown_win_rate": 8,
+      "high_pp_win_rate": 64,
+      "high_pp_volume": 2,
+      "overall_showdown_win_rate": 17,
+      "total_hands": 7912
+    },
+    {
+      "date": "2026-06-07",
+      "junk_pct": 56,
+      "junk_showdown_win_rate": 9,
+      "high_pp_win_rate": 66,
+      "high_pp_volume": 2,
+      "overall_showdown_win_rate": 19,
+      "total_hands": 7871
+    },
+    {
+      "date": "2026-06-06",
+      "junk_pct": 57,
+      "junk_showdown_win_rate": 7,
+      "high_pp_win_rate": 63,
+      "high_pp_volume": 2,
+      "overall_showdown_win_rate": 16,
+      "total_hands": 7834
+    },
+    {
+      "date": "2026-06-05",
+      "junk_pct": 56,
+      "junk_showdown_win_rate": 8,
+      "high_pp_win_rate": 65,
+      "high_pp_volume": 2,
+      "overall_showdown_win_rate": 18,
+      "total_hands": 7801
+    }
+  ]
+}
