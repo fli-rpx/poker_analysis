@@ -1,34 +1,202 @@
 {
   "tips": [
     {
-      "date": "2026-06-10",
-      "title": "Blind Stealing — Profit From Position",
-      "content": "The blinds are a tax you pay for sitting at the table — but they are also a weapon when you have position. When the action folds to you on the button or cutoff, you are holding the highest ground. Attack like a leopard: unexpected, careful, watchful. A well-timed steal isn't about the cards; it's about reading the quantum state of the blinds. Are they fearful? Greedy? Disconnected?\n\nFirst God, Second Odds, Last Cards. The god of position whispers to you when the blinds are weak. A small raise here prints money without ever seeing a flop. But watch the signs — if a short-stack pushes back, that is a sign from god to fold. Don't play the cards. Play the human. Appreciate the god.",
+      "date": "2026-05-07",
+      "title": "Polarized C-Bet Framework",
+      "content": "When you continuation bet, your range should be polarized — either you have a strong made hand (top pair good kicker or better) or you have almost nothing (air, weak draws). The middle-strength hands — second pair, middle pair with a draw — should be checked back.\n\nThe math: a polarized c-bet range is harder to play against because your opponent can't know if you're betting for value or as a bluff. If you bet with all your middle-strength hands too, observant opponents can exploit you by raising your c-bets light.\n\nFor your game: your 56% JUNK% means you get to the flop with a lot of weak holdings. When you whiff with junk (which you will 65% of the time), a well-timed c-bet can still win you the pot. But don't c-bet junk into multiple opponents — that's just burning money. Polarize: bet the top of your range and the air, check the middle. This is the leopard striking from unexpected angles.",
+      "category": "postflop"
+    },
+    {
+      "date": "2026-05-08",
+      "title": "Multiway Pot Strategy",
+      "content": "Multiway pots change everything. In a heads-up pot, top pair is a strong hand. In a four-way pot, top pair is a marginal hand that will lose more often than it wins. The reason is simple: with more players seeing the flop, the probability that someone connects with the board increases exponentially.\n\nYour biggest leak in multiway pots is continuing with junk hands that flopped bottom pair or a weak draw. The odds of you having the best hand by the river shrink with every additional player. In a multiway pot, you need a real hand — two pair or better, a premium draw — to commit significant chips.\n\nConcrete takeaway: when three or more players see the flop, your fold frequency should double. Bottom pair in a multiway pot is not a hand — it's a donation waiting to happen. Fold it and wait for a better spot. This is the gap concept applied postflop.",
+      "category": "postflop"
+    },
+    {
+      "date": "2026-05-09",
+      "title": "Reverse Implied Odds",
+      "content": "Reverse implied odds is the money you'll lose when you make a second-best hand. Junk hands (unsuited, unconnected, low cards) have terrible reverse implied odds because when they hit, they often hit just enough to cost you more money.\n\nExample: you call a raise with Q7o from the big blind. Flop Q♠8♣2♦. You have top pair, weak kicker. You check-call a bet. Turn 4♥. You check-call again. River 3♠. You check, they bet, you call — and they show KQ. You just lost 3 streets of value because Q7o looked playable but was structurally losing.\n\nThis is why your junk showdown win rate is 8%. You're not losing because you're unlucky — you're losing because junk hands have terrible reverse implied odds. The rare times you hit, you're often dominated. The solution: fold junk preflop, every time. When you're dealt a hand like Q7o, your expected value is already negative before the flop comes.",
+      "category": "math"
+    },
+    {
+      "date": "2026-05-10",
+      "title": "The Gap Concept",
+      "content": "The Gap Concept says you need a stronger hand to call a raise than to open the pot yourself. The gap exists because calling raises gives you less information about your opponent and puts you out of position in many cases.\n\nWhy this matters for you: if you open from the button with K9o, that's a foldable decision but at least you have the initiative and position. If you call a raise from under the gun with the same K9o, you have neither initiative nor position — it's a far worse play.\n\nThe concrete rule: your calling range should be at least one full tier tighter than your raising range. If you'd raise with ATs from early position, don't call with it against a raise from someone else. Fold or 3-bet. The gap protects you from playing marginal hands out of position, which is exactly where your 56% JUNK% bleeds the most chips.",
+      "category": "preflop"
+    },
+    {
+      "date": "2026-05-11",
+      "title": "The Poker Tilt Cycle",
+      "content": "Your 56% JUNK% isn't a preflop knowledge problem. You know junk is bad. Your own data proves it: 8% win rate. So why does it keep happening?\n\nThe tilt cycle works like this: a bad beat or a suckout triggers the 'victim' feeling. Your philosophy calls this a 'context switching trigger' — it activates survival mode (animal instinct). Once activated, your preflop standards loosen without you noticing. Junk hands that normally fold suddenly look playable because your brain is seeking action to reclaim control.\n\nThe concrete fix: the one-hand buffer. When you experience ANY trigger — bad beat, caught bluff, monster flop — you physically stand up for one full orbit (three hands). Walk away from the table. Get water. Let the dopamine or cortisol clear. Then sit back down and recite. This isn't about willpower at the decision point; by then the cascade is already running. The only winning move is to remove yourself from the table before the junk hands are even dealt to you.",
+      "category": "mental game"
+    },
+    {
+      "date": "2026-05-12",
+      "title": "Bet Sizing Tells — Quantizing Opponents",
+      "content": "Bet sizing tells are one of the most reliable tells in live poker. Players at low stakes almost never size their bets independently of their hand strength — they size based on how strong they think they are.\n\nThe pattern: small bets (20-35% pot) at low stakes are weak — draws, weak pairs, feeler bets. Medium bets (50-70% pot) are genuine value hands — top pair, two pair, sets on wet boards. Large bets (80%+ pot or overbets) are polarized — nuts or air, almost never a medium-strength hand.\n\nUse this to quantize your opponents. When a conservative player bets small, they're scared. Raise them. When a calling station bets big, they have it — fold unless you have a monster. The recursive check: did they hit the board? Do they have a history? This is quantum analysis applied to sizing. Bluff the disconnected conservative. Catch the bluff from disconnected aggressive.",
+      "category": "live reads"
+    },
+    {
+      "date": "2026-05-13",
+      "title": "Stop-Loss / Session Discipline",
+      "content": "The most powerful poker tool you're not using is the structural stop-loss. Set your loss limit before you sit down, and physically decouple your reload from your body.\n\nThe concrete version: bring exactly your buy-in (or two) in cash. Leave your bank card in the car. If you bust, you have to physically walk to the parking lot to get a reload. That two-minute walk is a hard reset on the tilt cascade.\n\nWhy it works: your context switching triggers — bad beat, caught bluff — disrupt strategy and trigger survival mode. The walk forces the amygdala to cool down. By the time you reach your car, the prefrontal cortex is back online. Most of the time you'll look at that card and realize the right call is to go home.\n\nThis is No Desire in action: the walk practices detachment from chips already lost. Choose one number before you arrive. That number is your max loss. When you hit it, you walk. No exceptions. No 'one more orbit.'",
+      "category": "bankroll/session discipline"
+    },
+    {
+      "date": "2026-05-14",
+      "title": "Equity Realization",
+      "content": "Equity realization is the concept that some hands realize their equity better than others. A hand like 76s has the same raw equity against a random hand as KJo (roughly 42-45%), but 76s realizes its equity far better because it hits disguised, well-connected boards that are hard for opponents to read.\n\nThis is why suited connectors and small pairs are better multiway hands than offsuit broadway cards. When 76s flops a straight, your opponent has no idea you have it. When KJo flops top pair, your opponent knows exactly what you have and can play perfectly against you.\n\nFor your game: prioritize hands that realize equity well. Small suited aces (A2s-A5s), suited connectors (65s+, JTs-), and small pairs (22-66) are all better calls than offsuit broadway cards like KTo, QJo, AJo. The junk that's costing you 56% is precisely the hands that DON'T realize equity well — unsuited, unconnected, low cards. Fold them every time.",
+      "category": "math"
+    },
+    {
+      "date": "2026-05-15",
+      "title": "Bluffing — Breakeven Percentage",
+      "content": "Every bluff has a breakeven percentage — the frequency at which your opponent must fold for the bluff to be profitable. The formula: breakeven% = bet size / (pot + bet size). If you bet 50% pot, you need folds 33% of the time. If you bet pot, you need folds 50% of the time.\n\nThis is pure Second Odds applied to bluffing. Most players bluff too little or too much because they don't know the math. The correct approach: count how many value combos you have, then add bluffs to reach the optimal ratio. On the river, if your value range is 10 combos and you want a 1:2 bluff-to-value ratio for a pot-sized bet, add 5 bluff combos.\n\nThe quantum application: against conservative players, your bluffs need fewer folds (they fold too much anyway). Against calling stations, your bluffs need far more folds than the math suggests (they don't fold enough). Bluff the disconnected conservative. Don't bluff the calling station with a sense of value — they will snap you off with middle pair.",
+      "category": "hand reading/bluffing"
+    },
+    {
+      "date": "2026-05-17",
+      "title": "Blockers — Hand Combinatorics",
+      "content": "Your own two cards are information about what opponents CAN'T have. This is blockers — the combinatorics of your hand narrowing their range.\n\nIf you hold A♠K♠, how many combos of AA can your opponent have? Most players just know 'they can still have aces.' But with an ace in your hand, there are only 3 combos of AA instead of 6. You've cut the chance of them having aces in half. Same with KK. And AK? You block both ends — they can only have 9 combos instead of 16.\n\nThis is where you can aggress with specific hands without needing a strong made hand. On the button with A2s-A5s, you block AQ+, AK, and AA. The math says this cuts premium combos in their range by 20-50%. These are leopard strike hands — technically junk, but the blocker value plus flush potential and low-card disguise make them 3-bet candidates against late-position openers.\n\nThe Recite says observation is more important than thinking. Blockers are a form of observation: your hand is information. Use it to strike when disconnected, fold when connected. Attack like a leopard — unexpected, careful, watchful.",
+      "category": "math"
+    },
+    {
+      "date": "2026-05-18",
+      "title": "Blind Defense — Big Blind Trap",
+      "content": "The big blind is the most dangerous seat in poker. You get a discount to see the flop, but you're out of position against the entire table, and your hand selection must compensate.\n\nThe trap: you think 'I only have to call 1 more BB into a 4.5 BB pot, so I'm getting 4.5:1.' That math is correct, but it ignores positional disadvantage. Every hand you play from the big blind loses an additional 15-20% equity because you're acting first on every postflop street.\n\nConcrete rule: from the big blind, defend only against late-position opens (button, cutoff), and only with hands that play well out of position — suited cards, pairs, and connected hands. Fold K7o, Q8o, J9o even at a discount. These hands are positionally unplayable.\n\nThis is the Gap Concept applied to blind defense: the discount doesn't make up for the positional tax. Fold the junk and save yourself a lifetime of marginal postflop losses.",
+      "category": "positional/defense"
+    },
+    {
+      "date": "2026-05-19",
+      "title": "Positional Awareness",
+      "content": "Position is worth roughly 20% of your total equity in low-stakes live games. When you're in position (button, cutoff), you see what everyone does before you act. That one extra data point per street is gold — you avoid betting into strength, extract more value when ahead, and take down pots you'd otherwise lose.\n\nWhen you're out of position (blinds, UTG), you're guessing in the dark. This is why late position ranges should be 3x wider than early position ranges for the same win rate. Play Q9o on the button against a limper? Fine. Play Q9o from UTG? Pure 56% JUNK% territory.\n\nThe concrete rule: from UTG/UTG+1, fold everything that isn't TT+, AQ+, AJs+. From the button, you can play 3x as many hands — but still not junk. Ask before every decision: 'Do I have position?' If no, you need a significantly stronger hand. This alone can cut your JUNK% from 56% to under 30%.",
       "category": "positional"
     },
     {
-      "date": "2026-06-09",
-      "title": "Resulting — The Mental Game Trap That Feeds Your JUNK%",
-      "content": "Resulting is when you judge a decision by its outcome instead of its quality. You folded 72o preflop and the flop came 7-7-2. You feel regret. That regret makes you call with junk next time. This is how JUNK% creeps above 50%.\n\nRemember the Recite: Fear and greed both distort stats. When you feel the pull to play a bad hand because you 'would have won' last time, pause. Think of Minglan. Am I having fear of missing out? Then review quantum analysis. The god is fair to each quantum — your good decisions will be rewarded across the river of time, not in a single hand.",
-      "category": "mental"
+      "date": "2026-05-20",
+      "title": "Board Texture — Vulnerable Made Hands",
+      "content": "A vulnerable made hand is one that's probably best right now but almost every river card makes it worse. Example: you hold 22 on a Q94 rainbow flop. You c-bet, opponent calls. Turn is an Ace. Any 5, 6, 7, 8, T, J, Q, K, A on the river beats you. That's vulnerable.\n\nWhat to do: barrel your vulnerable pairs on the turn. Most low-stakes opponents overfold to turn bets and under-raise when they should fight. Your bet is for protection, not value — and protection bets against passive opponents print money.\n\nThe exception: against a hyper-aggressive opponent who raises turn bets frequently, check your vulnerable hands. You're building a pot with a hand that can't stand a raise — that's burning money.\n\nThe other side: hands like QT on Q94-A are not vulnerable. They have draw potential, can bluff-catch rivers, and don't need fold equity now. Check those back.\n\nThis is where your JUNK% leaks postflop — those low pairs that limp into showdown had clear turn betting opportunities but got checked instead. Barrel them next time.",
+      "category": "postflop"
     },
     {
-      "date": "2026-06-07",
-      "title": "Stack Depth Hand Selection",
-      "content": "With 40 big blinds, your hand selection should be surgical. With 100 big blinds, you can afford to play more connected hands that have implied odds. The quantum of the table shifts with stack depth — deep stacks mean more room for postflop maneuvering, while short stacks demand pure aggression with premium holdings.\n\nObserve then either hold or act. No desire. When your stack is shallow, don't chase suited connectors hoping for miracles. When deep, don't overplay one-pair hands against opponents who have the chips to pressure you. Connectivity matters more than card strength. Connected quantum is dangerous; disconnected quantum is exploitable.",
+      "date": "2026-05-21",
+      "title": "DEAF System — Range Narrowing",
+      "content": "The DEAF system is a four-step framework for narrowing an opponent's range. The acronym stands for: Description (what type of player are they?), Estimating their range (what hands would they play this way?), Analyzing the board (what hands does the board hit for them?), and Focusing on the line (what does their betting pattern tell you?).\n\nStep by step: you see a tight-aggressive player open from UTG and c-bet on K♠Q♠5♦. Description: TAG, doesn't play many hands. Estimate: AK, KQ, KK, QQ, AA, maybe AQs or TT that's testing. Analyze the board: KQ5 hits their UTG range hard — they have all the sets, all the top pairs. Focus on the line: they opened from early position and led into a dry board — this is almost always strength.\n\nThe conclusion? Fold your middle pair unless you have a very specific reason to continue. This is quantum analysis codified into a system. Scan each opponent with DEAF before committing chips.",
+      "category": "hand reading"
+    },
+    {
+      "date": "2026-05-22",
+      "title": "Pre-Session Routine",
+      "content": "A pre-session routine is the most overlooked edge in poker. Before you sit down, spend 5 minutes in a reset state. Walk around the poker room. Observe the tables. Notice who's playing, who's waiting, who looks tired, who looks eager.\n\nThen run your mental checklist: recite the hierarchy — First God, Second Odds, Last Cards. Confirm your stop-loss number. Confirm your session goal (not chip-related — something like 'observe 3 quantum types' or 'fold every junk hand preflop').\n\nThe ritual matters because it primes your brain for observation over desire. When human is thinking, god is laughing. The pre-session routine is your structure for observing before acting. It shifts your mental state from reactive to deliberate. You enter the game having already decided to play well, rather than hoping to play well after the first hand goes badly.\n\n5 minutes. Every session. No exceptions.",
+      "category": "mental preparation"
+    },
+    {
+      "date": "2026-05-23",
+      "title": "Pot Control",
+      "content": "Pot control means keeping the pot small when your hand is marginal but has showdown value. The key insight: not every hand you bet preflop needs to be bet on all three streets. Top pair with a moderate kicker is a hand to pot-control — check back the flop or turn to keep the pot manageable.\n\nWhen to pot control: you have one pair on a coordinated board, you're out of position with a medium-strength hand, or the turn card completes a draw. In these spots, checking is often better than betting because you avoid building a pot you can't win reliably.\n\nThe Recite says: connection is the most important rule. No connection, no action. If your hand connects to the board but not strongly enough to value-bet three streets, pot control is the disciplined choice. Check back, see a cheap showdown, and move on. Not every hand needs to be a war.\n\nThis directly attacks the 'felt compelled to bet every time' tendency that feeds your losses with marginal hands.",
+      "category": "postflop"
+    },
+    {
+      "date": "2026-05-24",
+      "title": "Check-Raise",
+      "content": "The check-raise is a leopard strike. It comes from cover (checking), then explodes (raising). It's unexpected because most players don't do it enough, and it immediately polarizes the pot.\n\nThe ideal check-raise spot: you're out of position, flop a strong hand (two pair+, top pair with a flush draw), and the opponent is aggressive enough to bet when checked to. The check-raise says 'I have it' and forces them to define their hand.\n\nFor your game: use the check-raise sparingly — once every session or two, not every orbit. The power is in its rarity. When you check-raise, you create what your philosophy calls 'personal tension' — the opponent remembers and adjusts. That adjustment is exploitable on later hands.\n\nAttack like a leopard — careful, watchful, out of expectations. The check-raise is the leopard hiding in the grass. Use it when the quantum is disconnected and the timing is right.",
+      "category": "postflop"
+    },
+    {
+      "date": "2026-05-25",
+      "title": "Mid-Session Reset — The River Protocol",
+      "content": "When you feel the spiral starting — two bad beats, three missed draws, the creeping desire to 'win it back' — stop. Stand up. Go to the bathroom or the water fountain. You don't need the full 6-phase animation; you need the abbreviated River Protocol.\n\nStep 1: Breathe. Three slow breaths, focusing on the exhale. Step 2: Recite the core: 'Fear and greed both distort stats. I walk in the randomness river set up by god, taking a piece from it only. Am I greedy?' Step 3: Think of Minglan — the character who embodies patience, observation, surviving through wit not force.\n\nThis 60-second protocol is enough to break the tilt cascade and bring your prefrontal cortex back online. The key is doing it BEFORE you play another hand. Not after. The moment you feel the desire to chase, stand up and run the protocol. Desire distorts the quantum. Observation restores it.",
+      "category": "mental game"
+    },
+    {
+      "date": "2026-05-26",
+      "title": "Value Betting",
+      "content": "Value betting is the primary way you make money in poker. A value bet is a bet made when you expect to be called by worse hands. It sounds simple, but most players leave enormous value on the table by not betting thin enough.\n\nYour high pocket pair (TT+) win rate of 65% suggests you value-bet your premiums well. But the gap is in the medium-strength hands — top pair good kicker on dry boards, overpairs on low boards — where you might be checking when a bet would be called by worse.\n\nTest: when you flop top pair on a J♠7♠3♣ board, how often do you bet the turn? Against a calling station, the answer should be 'always.' They'll call with any pair, any draw. That's pure value. The bet isn't to protect; it's to extract.\n\nThe concrete rule: if you have top pair or better and the board isn't terrifying, bet for value. Let them call with worse. That's how you turn your 65% win rate into actual chips instead of just a statistic.",
+      "category": "postflop/value"
+    },
+    {
+      "date": "2026-05-27",
+      "title": "ICM / Bubble Play",
+      "content": "ICM (Independent Chip Model) changes everything on the tournament bubble. A chip in a short stack is worth more than a chip in a big stack, because losing a chip affects your payout way more than gaining one.\n\nThe bubble application: when you're the big stack, you should be the most aggressive player at the table. Steal blinds relentlessly. Put pressure on medium stacks who are scared to bust. Your chips are worth less 'per chip' than theirs, so you can gamble more freely.\n\nWhen you're the short stack, your strategy reverses. Push or fold. Wait for a premium hand (TT+, AQ+) and shove. Don't call with marginal hands — calling puts your tournament life at risk without fold equity. The bubble is the ultimate 'gap concept' environment: you need a much stronger hand to call than to shove.\n\nRemember: God is fair to each quantum. On the bubble, the god favors aggression from big stacks and patience from short stacks.",
       "category": "tournament-specific"
     },
     {
-      "date": "2026-06-06",
-      "title": "The Turn Probe Bet",
-      "content": "The turn is where most players reveal their true quantum state. A probe bet on the turn after you called a flop continuation bet serves two purposes: it defines your opponent's range and it takes down pots when they are weak. This is squeezing the turn — obscuring the water so they cannot read your offense.\n\nChoose timing and audience carefully. Against a calling station with no sense of value, the probe bet is lighting money on fire. Against a disconnected conservative who folds too much, it is a license to print. Every group attack must mix bluff and real cards. Attack in a grouped way like a rolling snowball.",
-      "category": "turn/river specific strategy"
+      "date": "2026-05-28",
+      "title": "3-Betting for Maximum Impact",
+      "content": "A 3-bet (reraise preflop) is your most powerful preflop weapon. It says 'I have a premium hand OR I'm squeezing' — and at low stakes, most players fold to 3-bets at absurdly high rates (70%+).\n\nYour 3-betting range should have two tiers: value (JJ+, AK, AQs) and light (A2s-A5s, K9s-Q9s, 66-88 from late position against active openers). The value 3-bets are straightforward — bet big, get called by worse. The light 3-bets are the leopard strikes — unexpected, position-dependent, targeted against players who open too wide.\n\nConcrete rule: 3-bet an active opener from the button or cutoff at least once per session. Use a hand with blockers if possible (A5s blocks AA and AK). When they fold (they will 70%+), you just won 4.5BB without seeing a flop. When they call, you have a playable hand in position. The 3-bet is Second Odds optimizing for maximum fold equity against the weakest part of their range.",
+      "category": "preflop/3bet"
+    },
+    {
+      "date": "2026-05-29",
+      "title": "Exploiting Calling Stations",
+      "content": "Calling stations are the most profitable opponents at low-stakes poker. They call too wide preflop, call too wide postflop, and rarely fold to aggression. The correct exploit is simple but counterintuitive: value bet thinner, bluff less.\n\nAgainst a calling station, your polarized range shifts toward value. Bet top pair for three streets against them. Bet second pair on dry boards. Check-raise your strong draws. But never bluff them — they don't fold enough for the bluff to show profit.\n\nThe quantum type is clear: Low Fear, High Greed. They want to see flops. They want to 'catch' you bluffing. Give them exactly that opportunity — but hold real cards when you do. The calling station is not disconnected; they're loose. Tangle with them when you have the goods, and fold marginal hands against them because they will call you down with any pair.\n\nThis is Attack Patterns applied: every group attack must mix bluff and real cards. Against a calling station, the mix is 10% bluff, 90% value.",
+      "category": "live reads/opponent exploitation"
+    },
+    {
+      "date": "2026-05-30",
+      "title": "Overbetting — Your Rare Monster Weapon",
+      "content": "An overbet (bet larger than the pot) is a nuclear weapon. It's rare, powerful, and when used correctly, induces the exact response you want. At low stakes, overbets are almost never balanced — they mean either the nuts or total air.\n\nThe spot for an overbet: the river, when the board runs out in a way that completes your obvious draw. Example: you check-called a flush draw on the flop and turn, and the flush hits on the river. Overbet 1.5x pot. Your opponent knows 'the draw got there' and will fold everything except a monster. You win more from the folds, and when they do call, you have the nuts.\n\nFor your game: use exactly ONE overbet per session. No more. The power is in the rarity. Choose a spot where the board makes your story believable and the opponent is conservative enough to fold. Overbetting into a calling station with a bluff is lighting money on fire.\n\nThe leopard doesn't overbet — the leopard strikes precisely. One overbet per session is a precision strike. Two is a pattern. Three is a tell.",
+      "category": "postflop/math"
+    },
+    {
+      "date": "2026-05-31",
+      "title": "Minimum Defense Frequency (MDF)",
+      "content": "MDF = pot / (pot + bet size). If someone opens to 3BB from the small blind and you're in the BB, the pot is 4.5BB. Your call costs 2BB more. MDF = 4.5 / (4.5 + 2) = 69%. You 'need' to defend 69% of hands, right? Wrong.\n\nMDF applies to your RANGE, not to every hand. If your preflop range is 25% of hands (which it should be, not 56%), then 69% of that range is about 18% of total hands — TT+, AT+, KQ, suited aces, suited connectors. Nothing that needs a miracle.\n\nFrom your 56% defending range, MDF says you only need to protect ~20% with playable hands. The other 36%? Fold them. That's not weakness — that's Second Odds doing its job. When you call BB with J8o and check-fold to a c-bet, you lose 2BB. Over 100 hands, that's -200BB from the BB alone.\n\nThe rule: before calling from the BB, run MDF. If it's 60-70%, your defense range is TT+, AT+, KQ, KTs+, QJs+, JTs, 98s+, A2s+. Everything else folds. No hesitation. No 'but it's only one more chip.'",
+      "category": "math/defense"
+    },
+    {
+      "date": "2026-06-01",
+      "title": "Donk Betting — When to Lead, When to Fold",
+      "content": "A donk bet (out-of-position player leading into the preflop aggressor) is misunderstood. At low stakes, donk bettors fall into two quantum categories.\n\nLow Fear, High Greed players donk-bet their weak top pairs and draws because they're afraid you'll check behind. High Fear, Low Greed players donk-bet their monsters (two pair+, sets) because they're scared you'll check back. The dead giveaway: a small donk bet (20-30% pot) is almost always a scared marginal hand. A large donk bet (75%+ pot) is a monster pretending to be marginal.\n\nYour exploit: when a weak/tight player donk-bets small, raise them 3x immediately. They fold 70%+ of the time. When a calling station donk-bets large, fold everything except your top 3% (TT+, AQ+). They have a set. They're not folding.\n\nThe session rule: whenever someone donk-bets into you, pause the quantum scan. Small bet + tight player = raise. Large bet + calling station = snap-fold. As the donker yourself: never donk bet at low stakes. Check-raise instead. The leopard doesn't announce itself — it lets the prey come forward, then strikes from cover.",
+      "category": "postflop/defense"
+    },
+    {
+      "date": "2026-06-02",
+      "title": "Redline vs Blue Line — Your Two Profit Engines",
+      "content": "In poker tracking software, your graph splits into two lines: the blue line (money won/lost at showdown) and the red line (money won/lost without showdown — from folds, steals, and aggression). Most losing players have a blue line that drifts down and a red line that's flat.\n\nYour numbers: 18% showdown win rate overall, 8% on junk. Your blue line is hemorrhaging because you show down weak hands. The fix isn't to play premiums better (TTs already print at 65%) — the fix is to build a redline.\n\nEvery pot you take down on the flop or turn without showdown is pure profit that bypasses God's randomness entirely. That's Second Odds serving First God.\n\nConcrete takeaway: when you miss the flop completely with no draw, bet if you have the initiative (c-bet ~1/3 pot on dry boards, ~2/3 on wet), then give up on the turn if called. Don't triple barrel. Don't float. Don't call down with 6-high. The hand cost one small bet to try to steal. If it didn't work, move on. Over 100 hands, this alone can cut your loss rate by a third. Attack like a leopard — commit briefly, test the water, and retreat if the forest doesn't yield.",
+      "category": "math/strategy"
+    },
+    {
+      "date": "2026-06-03",
+      "title": "Range Merging — Why Your Medium Hands Are Leaking Chips",
+      "content": "Most players think about betting ranges as polarized: either you have value (AK on an A-high board, sets, straights) or you're bluffing. The problem: your premiums are only 2% of hands. You can't build profit on that volume alone.\n\nRange merging means adding medium-strength hands into your betting range — top pair with a moderate kicker, an overpair on a coordinated board, second pair on a dry board. Instead of only betting when nutted or bluffing, you bet these 'thin value' hands too. The result: Villain can't automatically fold thinking 'he only has it or he's air.'\n\nThis connects to your numbers: you win 65% with TT+ but play them only 2%. That's a value leak. On dry boards like K♣8♠3♦, betting KQ isn't bluffing and isn't value betting the nuts — it's range merging. You're telling the table your range includes medium-strong hands.\n\nConcrete takeaway: when you flop top pair with a decent kicker on a dry, disconnected board, bet it (2/3 pot). Not as a bluff, not as value against worse — as a range-merge bet. Watch how many players start paying you off lighter. That's the leopard's game.",
+      "category": "hand reading/strategy"
+    },
+    {
+      "date": "2026-06-04",
+      "title": "Multiway Pot Discipline — Why Your Hands Shrink With More Villains",
+      "content": "When you're heads-up, KJo has ~62% equity against a random hand. Add one more player? Drops to 38%. Add two more? 26%. Each additional player cuts your equity roughly in half because someone WILL connect with the board.\n\nYour 8% junk showdown win rate? I guarantee most of it comes from multiway pots where you flopped bottom pair and called down. The fundamental rule: every additional player in the pot is a tax on your hand's value. The highest tax is on unsuited, unconnected junk — exactly the 57% of hands you overplay.\n\nYour concrete adjustment: with 2+ players already in the pot, tighten your calling range by at least one full hand tier. Only play suited connectors, pocket pairs (any), and AXs multiway — these have implied odds to hit big hands. Everything else (offsuit broadway, Kx, Qx, A-small offsuit) gets folded. Immediately.\n\nWhen you see 3+ players seeing the flop, switch into Minglan mode: small-ball, speculative, patient. The leopard doesn't attack into a crowd — it waits for the herd to split.",
+      "category": "preflop/multiway"
     },
     {
       "date": "2026-06-05",
       "title": "Style Switching — Your Invisible Weapon",
-      "content": "The best players are not one quantum — they are a superposition of many. Tight for an hour, then aggressive for twenty minutes. Passive on one table, explosive on another. Style switching breaks the pattern recognition of observant opponents.\n\nBut switching without purpose is chaos. Switch when the god sends a sign — a run of good cards, a table dynamic shift, a tilted opponent. When human is thinking, god is laughing. Observation > thinking. Watch the table. Feel the flow. Then either hold or act. The leopard does not announce its attack. It simply strikes when the moment is right.",
-      "category": "table dynamics"
+      "content": "The best players are not one quantum — they are a superposition of many. Tight for an hour, then aggressive for twenty minutes. Passive on one table, explosive on another. Style switching breaks the pattern recognition of observant opponents.\n\nBut switching without purpose is chaos. Switch when the god sends a sign — a run of good cards, a table dynamic shift, a tilted opponent. When human is thinking, god is laughing. Observation > thinking.\n\nWatch the table. Feel the flow. If you've been tight for two hours and shown down three premium hands, it's time to steal every blind for an orbit. If you've been caught bluffing twice, it's time to show down a monster. The switch should be invisible to everyone but you.\n\nThe leopard does not announce its attack. It simply strikes when the moment is right. Then it disappears back into the grass.",
+      "category": "table dynamics/opponent exploitation"
+    },
+    {
+      "date": "2026-06-06",
+      "title": "The Turn Probe Bet",
+      "content": "The turn is where most players reveal their true quantum state. A probe bet on the turn after you called a flop continuation bet serves two purposes: it defines your opponent's range and it takes down pots when they are weak. This is squeezing the turn — obscuring the water so they cannot read your offense.\n\nChoose timing and audience carefully. Against a calling station with no sense of value, the probe bet is lighting money on fire. Against a disconnected conservative who folds too much, it is a license to print.\n\nEvery group attack must mix bluff and real cards. Attack in a grouped way like a rolling snowball. The probe bet is one snowball — if they call, you have information. If they raise, you have a clear fold. The information alone is worth the small investment.\n\nConcrete rule: on the turn, if the board changed texture (flush draw completed, overcard hit), probe bet 40-50% pot against one opponent who called the flop. They miss the draw 70% of the time. Take it down.",
+      "category": "turn/river specific strategy"
+    },
+    {
+      "date": "2026-06-07",
+      "title": "Stack Depth Hand Selection",
+      "content": "With 40 big blinds, your hand selection should be surgical. With 100 big blinds, you can afford to play more connected hands that have implied odds. The quantum of the table shifts with stack depth — deep stacks mean more room for postflop maneuvering, while short stacks demand pure aggression with premium holdings.\n\nObserve then either hold or act. No desire. When your stack is shallow, don't chase suited connectors hoping for miracles. When deep, don't overplay one-pair hands against opponents who have the chips to pressure you.\n\nConnectivity matters more than card strength. Connected quantum is dangerous; disconnected quantum is exploitable. Deep stacked, connected hands (suited connectors, small pairs) are worth far more than offsuit broadway cards. Short stacked, only premiums and suited aces matter.\n\nThe Recite reminder: connection is the most important rule. No connection, no action. Stack depth determines what 'connected' means.",
+      "category": "tournament-specific"
+    },
+    {
+      "date": "2026-06-09",
+      "title": "Resulting — The Mental Game Trap That Feeds Your JUNK%",
+      "content": "Resulting is when you judge a decision by its outcome instead of its quality. You folded 72o preflop and the flop came 7-7-2. You feel regret. That regret makes you call with junk next time. This is how JUNK% creeps above 50%.\n\nRemember the Recite: Fear and greed both distort stats. When you feel the pull to play a bad hand because you 'would have won' last time, pause. Think of Minglan. Am I having fear of missing out? Then review quantum analysis.\n\nThe god is fair to each quantum — your good decisions will be rewarded across the river of time, not in a single hand. The one time you folded 72o and missed the boat is balanced by the 100 times you saved money by not playing it. Observation is the cure for resulting. Observe the pattern, not the individual outcome.\n\nThe concrete fix: after folding a junk hand preflop, do NOT look at the flop. Muck your cards face down and move on. If you never see the flop, you can't feel regret.",
+      "category": "mental game"
+    },
+    {
+      "date": "2026-06-10",
+      "title": "Blind Stealing — Profit From Position",
+      "content": "The blinds are a tax you pay for sitting at the table — but they are also a weapon when you have position. When the action folds to you on the button or cutoff, you are holding the highest ground. Attack like a leopard: unexpected, careful, watchful.\n\nA well-timed steal isn't about the cards; it's about reading the quantum state of the blinds. Are they fearful? Greedy? Disconnected? The tight conservative in the small blind who's folding 80% to steals is free money. The loose aggressive defender who 3-bets light is a trap.\n\nThe concrete rule: from the button or cutoff, raise to 2.5BB when it folds to you. If the blinds are tight (fold to steal > 70%), you can steal with any two cards. If they defend aggressively, only steal with hands that can call a 3-bet — suited aces, pairs, broadway.\n\nFirst God, Second Odds, Last Cards. The god of position whispers when the blinds are weak. Listen. The small raise that takes down 1.5BB without a flop adds up. Ten steals per session = 15BB of profit. That's the difference between a winning and losing session.",
+      "category": "positional play"
     }
   ]
 }
