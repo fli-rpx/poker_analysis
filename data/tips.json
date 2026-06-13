@@ -1,6 +1,12 @@
 {
   "tips": [
     {
+      "date": "2026-06-12",
+      "title": "The Range Bucket System — Simplify Hand Reading to Three Questions",
+      "content": "Hand reading sounds overwhelming — there are 1,326 possible starting combos, 19,600 possible flops, and infinite lines. But at the decision point on any street, you only need to sort villain's hands into three buckets: Value (beats you), Draws (might beat you), and Air (can't beat you).\n\nBucket 1 — Value: hands that beat your current holding. Sets, two pair, top pair with better kicker. Bucket 2 — Draws: hands with equity to improve. Flush draws, straight draws, pair+draw combos. Bucket 3 — Air: everything else. Missed hands, pure bluffs, weak pairs they're giving up on.\n\nEvery bet villain makes is a signal about which bucket they occupy. A large bet ($75%+ pot) says 'I'm in Bucket 1 — fold.' A small bet (30-40% pot) says 'I'm in Bucket 1 with a vulnerable hand, or Bucket 2 drawing.' A check says 'I'm in Bucket 3 or Bucket 2.'\n\nThe three questions per street:\n1. Which bucket is their bet/check telling me they're in?\n2. Does the board texture support that story? (Did draws complete? Did overcards hit?)\n3. Does their previous street action match? (Did they call a raise preflop and bet small on a dry board? That's Bucket 1 — fold.)\n\nThis directly attacks your 8% junk showdown win rate. Most junk showdowns happen because you never ran the bucket check on the river. You got there with bottom pair, villain bet, you called hoping 'maybe they're bluffing' — but the bucket system says: if they bet the river, they're in Bucket 1 (value). Barring a read that they're a maniac, fold. The god gave you that information — use it.",
+      "category": "hand reading"
+    },
+    {
       "date": "2026-06-11",
       "title": "The Exit Protocol — Structural Session Discipline",
       "content": "The hardest poker skill isn't reading opponents, calculating odds, or bluffing. It's knowing when to leave. You've had the session: up 3 buy-ins, then a bad beat, then a cooler, then you're down 1 buy-in and grinding, and before you know it, you're 3 hours past your planned stop time and down 4 buy-ins. This isn't bad luck — it's a structural failure of your exit protocol.\n\nThe fix: decouple the decision to leave from your emotional state. Set two hard exit triggers BEFORE you sit down — a time trigger and a loss trigger. Time: 2 hours, hard stop. Loss: 1.5 buy-ins, hard stop. Whichever hits first. No negotiation. No 'one more orbit.' The key insight from your own philosophy — No desire — applies here directly: the desire to 'win it back' is exactly the same greed that plays junk to showdown at 8% win rate. It's desire distorting the quantum.\n\nBut the most powerful layer: set a WIN exit too. Up 2 buy-ins? Cash out and leave. The dopamine from winning is just as dangerous as the cortisol from losing — it loosens your preflop standards, makes you feel invincible, and leads to the exact same collapse pattern. The Recite says 'Fear and greed both distort stats.' The win exit protects you from greed. The loss exit protects you from fear. Walk away at either trigger. The god will still be there tomorrow. This session is one sample in the river of time — don't let a single sample rewrite your strategy.",
@@ -203,6 +209,12 @@
       "title": "Blind Stealing — Profit From Position",
       "content": "The blinds are a tax you pay for sitting at the table — but they are also a weapon when you have position. When the action folds to you on the button or cutoff, you are holding the highest ground. Attack like a leopard: unexpected, careful, watchful.\n\nA well-timed steal isn't about the cards; it's about reading the quantum state of the blinds. Are they fearful? Greedy? Disconnected? The tight conservative in the small blind who's folding 80% to steals is free money. The loose aggressive defender who 3-bets light is a trap.\n\nThe concrete rule: from the button or cutoff, raise to 2.5BB when it folds to you. If the blinds are tight (fold to steal > 70%), you can steal with any two cards. If they defend aggressively, only steal with hands that can call a 3-bet — suited aces, pairs, broadway.\n\nFirst God, Second Odds, Last Cards. The god of position whispers when the blinds are weak. Listen. The small raise that takes down 1.5BB without a flop adds up. Ten steals per session = 15BB of profit. That's the difference between a winning and losing session.",
       "category": "positional play"
+    },
+    {
+      "date": "2026-06-13",
+      "title": "The Sizing Decoder — Exploiting Predictable Bet Sizing Patterns",
+      "content": "Today's focus: The Sizing Decoder — Exploiting Predictable Bet Sizing Patterns. This falls under the opponent exploitation/live reads category. Review the principle of First God > Second Odds > Last Cards before your session. Attack like a leopard — unexpected, careful, watchful.",
+      "category": "opponent exploitation/live reads"
     }
   ]
 }
