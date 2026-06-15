@@ -1,6 +1,12 @@
 {
   "tips": [
     {
+      "date": "2026-06-15",
+      "title": "Position-Based Hand Selection — Tighten Your RFI Ranges",
+      "content": "RFI (Raise First In) is the most important decision you make in any hand. It's the only spot where you have 100% control — no one else has acted yet. Your RFI range determines everything that follows: your c-bet frequency, your defense range, and ultimately your profitability from each position.\n\nThe rule: your RFI range should tighten by roughly one hand class per seat moving from button to under the gun. On the button, you can open ~40% of hands (any pair, any suited ace, K9o+, Q9o+, J9o+, T9o+, suited connectors 65s+). From the cutoff, drop to ~30%. From hijack, ~22%. From under the gun, ~15% — only premium pairs (TT+), strong broadway (AJs+, KQs, AQo+), and good suited aces (ATs+).\n\nLet's make this concrete with an example. You're in middle position with J9s (jack-nine suited). It looks playable — suited, semi-connected, feels like a leopard hand. But think about who's left to act: the cutoff, button, blinds. Any of them could wake up with AQ, KJs, or TT and dominate you. J9s from middle position has negative expected value long-term because you're out of position against too many stronger ranges. The correct play is fold. You're not being weak — you're respecting position.\n\nThis connects directly to your 57% JUNK%. Most of those junk hands enter the pot from early or middle position where even marginal hands are losing plays. The fix isn't complicated: print out an RFI chart by position and tape it to your monitor or chip tray. Before you open, check: \"Am I in the right position for this hand?\" If the answer is no, fold. The leopard strikes from the tall grass of late position — not from the open field of early position. Give yourself the positional advantage before you even look at your cards.",
+      "category": "preflop"
+    },
+    {
       "date": "2026-06-12",
       "title": "The Range Bucket System — Simplify Hand Reading to Three Questions",
       "content": "Hand reading sounds overwhelming — there are 1,326 possible starting combos, 19,600 possible flops, and infinite lines. But at the decision point on any street, you only need to sort villain's hands into three buckets: Value (beats you), Draws (might beat you), and Air (can't beat you).\n\nBucket 1 — Value: hands that beat your current holding. Sets, two pair, top pair with better kicker. Bucket 2 — Draws: hands with equity to improve. Flush draws, straight draws, pair+draw combos. Bucket 3 — Air: everything else. Missed hands, pure bluffs, weak pairs they're giving up on.\n\nEvery bet villain makes is a signal about which bucket they occupy. A large bet ($75%+ pot) says 'I'm in Bucket 1 — fold.' A small bet (30-40% pot) says 'I'm in Bucket 1 with a vulnerable hand, or Bucket 2 drawing.' A check says 'I'm in Bucket 3 or Bucket 2.'\n\nThe three questions per street:\n1. Which bucket is their bet/check telling me they're in?\n2. Does the board texture support that story? (Did draws complete? Did overcards hit?)\n3. Does their previous street action match? (Did they call a raise preflop and bet small on a dry board? That's Bucket 1 — fold.)\n\nThis directly attacks your 8% junk showdown win rate. Most junk showdowns happen because you never ran the bucket check on the river. You got there with bottom pair, villain bet, you called hoping 'maybe they're bluffing' — but the bucket system says: if they bet the river, they're in Bucket 1 (value). Barring a read that they're a maniac, fold. The god gave you that information — use it.",
@@ -215,12 +221,6 @@
       "title": "The Sizing Decoder — Exploiting Predictable Bet Sizing Patterns",
       "content": "Today's focus: The Sizing Decoder — Exploiting Predictable Bet Sizing Patterns. This falls under the opponent exploitation/live reads category. Review the principle of First God > Second Odds > Last Cards before your session. Attack like a leopard — unexpected, careful, watchful.",
       "category": "opponent exploitation/live reads"
-    },
-    {
-      "date": "2026-06-15",
-      "title": "Position-Based Hand Selection — Tighten Your RFI Ranges",
-      "content": "Today's focus: Position-Based Hand Selection — Tighten Your RFI Ranges. This falls under the preflop category. Review the principle of First God > Second Odds > Last Cards before your session. Attack like a leopard — unexpected, careful, watchful.",
-      "category": "preflop"
     }
   ]
 }
