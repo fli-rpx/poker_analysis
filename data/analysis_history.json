@@ -98,6 +98,15 @@
       "high_pp_volume": 2,
       "overall_showdown_win_rate": 0,
       "total_hands": 7953
+    },
+    {
+      "date": "2026-06-18",
+      "junk_pct": 57,
+      "junk_showdown_win_rate": 0,
+      "high_pp_win_rate": 0,
+      "high_pp_volume": 2,
+      "overall_showdown_win_rate": 0,
+      "total_hands": 7953
     }
   ]
 }
