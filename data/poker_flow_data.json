@@ -1,0 +1,3308 @@
+{
+  "meta": {
+    "total_hands": 7911,
+    "files_analyzed": 166,
+    "generated": "2026-07-04"
+  },
+  "flows": {
+    "EP|Good|3 Aggressive|preflop": {
+      "position": "EP",
+      "category": "Good",
+      "opponents": "3 Aggressive",
+      "stage": "preflop",
+      "theoretical": "Raise",
+      "total_hands": 1,
+      "total_net": 49370,
+      "wins": 1,
+      "losses": 0,
+      "actions": {
+        "Raise": {
+          "count": 1,
+          "total_net": 49370,
+          "avg_net": 49370
+        }
+      },
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Good|3 Aggressive|flop": {
+      "position": "EP",
+      "category": "Good",
+      "opponents": "3 Aggressive",
+      "stage": "flop",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Good|3 Aggressive|turn": {
+      "position": "EP",
+      "category": "Good",
+      "opponents": "3 Aggressive",
+      "stage": "turn",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Good|3 Aggressive|river": {
+      "position": "EP",
+      "category": "Good",
+      "opponents": "3 Aggressive",
+      "stage": "river",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Good|1 Weak + 2 Agg|preflop": {
+      "position": "EP",
+      "category": "Good",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "preflop",
+      "theoretical": "Raise",
+      "total_hands": 23,
+      "total_net": 360403,
+      "wins": 19,
+      "losses": 4,
+      "actions": {
+        "Raise": {
+          "count": 11,
+          "total_net": 40570,
+          "avg_net": 3688
+        },
+        "All-In": {
+          "count": 9,
+          "total_net": 288498,
+          "avg_net": 32055
+        },
+        "Call": {
+          "count": 3,
+          "total_net": 31335,
+          "avg_net": 10445
+        }
+      },
+      "data_driven_best": "All-In",
+      "data_driven_best_avg": 32055
+    },
+    "EP|Good|1 Weak + 2 Agg|flop": {
+      "position": "EP",
+      "category": "Good",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "flop",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Good|1 Weak + 2 Agg|turn": {
+      "position": "EP",
+      "category": "Good",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "turn",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Good|1 Weak + 2 Agg|river": {
+      "position": "EP",
+      "category": "Good",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "river",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Good|2 Weak + 1 Agg|preflop": {
+      "position": "EP",
+      "category": "Good",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "preflop",
+      "theoretical": "Raise",
+      "total_hands": 29,
+      "total_net": 201888,
+      "wins": 23,
+      "losses": 1,
+      "actions": {
+        "Raise": {
+          "count": 23,
+          "total_net": 26352,
+          "avg_net": 1146
+        },
+        "All-In": {
+          "count": 2,
+          "total_net": 58716,
+          "avg_net": 29358
+        },
+        "Call": {
+          "count": 4,
+          "total_net": 116820,
+          "avg_net": 29205
+        }
+      },
+      "data_driven_best": "Call",
+      "data_driven_best_avg": 29205
+    },
+    "EP|Good|2 Weak + 1 Agg|flop": {
+      "position": "EP",
+      "category": "Good",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "flop",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Good|2 Weak + 1 Agg|turn": {
+      "position": "EP",
+      "category": "Good",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "turn",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Good|2 Weak + 1 Agg|river": {
+      "position": "EP",
+      "category": "Good",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "river",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Good|3 Weak|preflop": {
+      "position": "EP",
+      "category": "Good",
+      "opponents": "3 Weak",
+      "stage": "preflop",
+      "theoretical": "Raise",
+      "total_hands": 5,
+      "total_net": 14715,
+      "wins": 2,
+      "losses": 1,
+      "actions": {
+        "Call": {
+          "count": 5,
+          "total_net": 14715,
+          "avg_net": 2943
+        }
+      },
+      "data_driven_best": "Call",
+      "data_driven_best_avg": 2943
+    },
+    "EP|Good|3 Weak|flop": {
+      "position": "EP",
+      "category": "Good",
+      "opponents": "3 Weak",
+      "stage": "flop",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Good|3 Weak|turn": {
+      "position": "EP",
+      "category": "Good",
+      "opponents": "3 Weak",
+      "stage": "turn",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Good|3 Weak|river": {
+      "position": "EP",
+      "category": "Good",
+      "opponents": "3 Weak",
+      "stage": "river",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Medium|3 Aggressive|preflop": {
+      "position": "EP",
+      "category": "Medium",
+      "opponents": "3 Aggressive",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 11,
+      "total_net": -254840,
+      "wins": 2,
+      "losses": 2,
+      "actions": {
+        "Call": {
+          "count": 5,
+          "total_net": 27663,
+          "avg_net": 5533
+        },
+        "Raise": {
+          "count": 3,
+          "total_net": -1955,
+          "avg_net": -652
+        },
+        "Fold": {
+          "count": 1,
+          "total_net": -36,
+          "avg_net": -36
+        },
+        "All-In": {
+          "count": 2,
+          "total_net": -280512,
+          "avg_net": -140256
+        }
+      },
+      "data_driven_best": "Call",
+      "data_driven_best_avg": 5533
+    },
+    "EP|Medium|3 Aggressive|flop": {
+      "position": "EP",
+      "category": "Medium",
+      "opponents": "3 Aggressive",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Medium|3 Aggressive|turn": {
+      "position": "EP",
+      "category": "Medium",
+      "opponents": "3 Aggressive",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Medium|3 Aggressive|river": {
+      "position": "EP",
+      "category": "Medium",
+      "opponents": "3 Aggressive",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Medium|1 Weak + 2 Agg|preflop": {
+      "position": "EP",
+      "category": "Medium",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 30,
+      "total_net": 465051,
+      "wins": 10,
+      "losses": 3,
+      "actions": {
+        "Fold": {
+          "count": 5,
+          "total_net": -43620,
+          "avg_net": -8724
+        },
+        "Call": {
+          "count": 13,
+          "total_net": 834311,
+          "avg_net": 64178
+        },
+        "Raise": {
+          "count": 9,
+          "total_net": -414351,
+          "avg_net": -46039
+        },
+        "All-In": {
+          "count": 3,
+          "total_net": 88711,
+          "avg_net": 29570
+        }
+      },
+      "data_driven_best": "Call",
+      "data_driven_best_avg": 64178
+    },
+    "EP|Medium|1 Weak + 2 Agg|flop": {
+      "position": "EP",
+      "category": "Medium",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Medium|1 Weak + 2 Agg|turn": {
+      "position": "EP",
+      "category": "Medium",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Medium|1 Weak + 2 Agg|river": {
+      "position": "EP",
+      "category": "Medium",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Medium|2 Weak + 1 Agg|preflop": {
+      "position": "EP",
+      "category": "Medium",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "preflop",
+      "theoretical": "Call",
+      "total_hands": 139,
+      "total_net": -4443245,
+      "wins": 43,
+      "losses": 18,
+      "actions": {
+        "Call": {
+          "count": 70,
+          "total_net": -4662628,
+          "avg_net": -66609
+        },
+        "Raise": {
+          "count": 37,
+          "total_net": 217413,
+          "avg_net": 5876
+        },
+        "Fold": {
+          "count": 30,
+          "total_net": -79350,
+          "avg_net": -2645
+        },
+        "All-In": {
+          "count": 2,
+          "total_net": 81320,
+          "avg_net": 40660
+        }
+      },
+      "data_driven_best": "Raise",
+      "data_driven_best_avg": 5876
+    },
+    "EP|Medium|2 Weak + 1 Agg|flop": {
+      "position": "EP",
+      "category": "Medium",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "flop",
+      "theoretical": "Check-Fold",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Medium|2 Weak + 1 Agg|turn": {
+      "position": "EP",
+      "category": "Medium",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Medium|2 Weak + 1 Agg|river": {
+      "position": "EP",
+      "category": "Medium",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Medium|3 Weak|preflop": {
+      "position": "EP",
+      "category": "Medium",
+      "opponents": "3 Weak",
+      "stage": "preflop",
+      "theoretical": "Call",
+      "total_hands": 61,
+      "total_net": 68942,
+      "wins": 24,
+      "losses": 4,
+      "actions": {
+        "Check": {
+          "count": 11,
+          "total_net": 45583,
+          "avg_net": 4144
+        },
+        "Call": {
+          "count": 40,
+          "total_net": 118699,
+          "avg_net": 2967
+        },
+        "Fold": {
+          "count": 10,
+          "total_net": -95340,
+          "avg_net": -9534
+        }
+      },
+      "data_driven_best": "Check",
+      "data_driven_best_avg": 4144
+    },
+    "EP|Medium|3 Weak|flop": {
+      "position": "EP",
+      "category": "Medium",
+      "opponents": "3 Weak",
+      "stage": "flop",
+      "theoretical": "Check-Fold",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Medium|3 Weak|turn": {
+      "position": "EP",
+      "category": "Medium",
+      "opponents": "3 Weak",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Medium|3 Weak|river": {
+      "position": "EP",
+      "category": "Medium",
+      "opponents": "3 Weak",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Junk|3 Aggressive|preflop": {
+      "position": "EP",
+      "category": "Junk",
+      "opponents": "3 Aggressive",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 20,
+      "total_net": 22016,
+      "wins": 3,
+      "losses": 2,
+      "actions": {
+        "Fold": {
+          "count": 7,
+          "total_net": -4275,
+          "avg_net": -611
+        },
+        "Call": {
+          "count": 8,
+          "total_net": -1453,
+          "avg_net": -182
+        },
+        "Raise": {
+          "count": 4,
+          "total_net": 27789,
+          "avg_net": 6947
+        },
+        "All-In": {
+          "count": 1,
+          "total_net": -45,
+          "avg_net": -45
+        }
+      },
+      "data_driven_best": "Raise",
+      "data_driven_best_avg": 6947
+    },
+    "EP|Junk|3 Aggressive|flop": {
+      "position": "EP",
+      "category": "Junk",
+      "opponents": "3 Aggressive",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Junk|3 Aggressive|turn": {
+      "position": "EP",
+      "category": "Junk",
+      "opponents": "3 Aggressive",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Junk|3 Aggressive|river": {
+      "position": "EP",
+      "category": "Junk",
+      "opponents": "3 Aggressive",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Junk|1 Weak + 2 Agg|preflop": {
+      "position": "EP",
+      "category": "Junk",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 162,
+      "total_net": 2937296,
+      "wins": 18,
+      "losses": 9,
+      "actions": {
+        "Fold": {
+          "count": 115,
+          "total_net": -723089,
+          "avg_net": -6288
+        },
+        "Raise": {
+          "count": 18,
+          "total_net": 2822213,
+          "avg_net": 156790
+        },
+        "Call": {
+          "count": 22,
+          "total_net": 55861,
+          "avg_net": 2539
+        },
+        "All-In": {
+          "count": 7,
+          "total_net": 782311,
+          "avg_net": 111759
+        }
+      },
+      "data_driven_best": "Raise",
+      "data_driven_best_avg": 156790
+    },
+    "EP|Junk|1 Weak + 2 Agg|flop": {
+      "position": "EP",
+      "category": "Junk",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Junk|1 Weak + 2 Agg|turn": {
+      "position": "EP",
+      "category": "Junk",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Junk|1 Weak + 2 Agg|river": {
+      "position": "EP",
+      "category": "Junk",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Junk|2 Weak + 1 Agg|preflop": {
+      "position": "EP",
+      "category": "Junk",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 756,
+      "total_net": -4730009,
+      "wins": 66,
+      "losses": 32,
+      "actions": {
+        "Fold": {
+          "count": 533,
+          "total_net": -3196136,
+          "avg_net": -5997
+        },
+        "Call": {
+          "count": 160,
+          "total_net": -647264,
+          "avg_net": -4045
+        },
+        "Raise": {
+          "count": 60,
+          "total_net": -953009,
+          "avg_net": -15883
+        },
+        "All-In": {
+          "count": 3,
+          "total_net": 66400,
+          "avg_net": 22133
+        }
+      },
+      "data_driven_best": "All-In",
+      "data_driven_best_avg": 22133
+    },
+    "EP|Junk|2 Weak + 1 Agg|flop": {
+      "position": "EP",
+      "category": "Junk",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Junk|2 Weak + 1 Agg|turn": {
+      "position": "EP",
+      "category": "Junk",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Junk|2 Weak + 1 Agg|river": {
+      "position": "EP",
+      "category": "Junk",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Junk|3 Weak|preflop": {
+      "position": "EP",
+      "category": "Junk",
+      "opponents": "3 Weak",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 389,
+      "total_net": -355629,
+      "wins": 49,
+      "losses": 24,
+      "actions": {
+        "Call": {
+          "count": 115,
+          "total_net": 123588,
+          "avg_net": 1075
+        },
+        "Check": {
+          "count": 58,
+          "total_net": -158002,
+          "avg_net": -2724
+        },
+        "Fold": {
+          "count": 216,
+          "total_net": -321215,
+          "avg_net": -1487
+        }
+      },
+      "data_driven_best": "Call",
+      "data_driven_best_avg": 1075
+    },
+    "EP|Junk|3 Weak|flop": {
+      "position": "EP",
+      "category": "Junk",
+      "opponents": "3 Weak",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Junk|3 Weak|turn": {
+      "position": "EP",
+      "category": "Junk",
+      "opponents": "3 Weak",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "EP|Junk|3 Weak|river": {
+      "position": "EP",
+      "category": "Junk",
+      "opponents": "3 Weak",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Good|3 Aggressive|preflop": {
+      "position": "MP",
+      "category": "Good",
+      "opponents": "3 Aggressive",
+      "stage": "preflop",
+      "theoretical": "Raise",
+      "total_hands": 5,
+      "total_net": 26256,
+      "wins": 3,
+      "losses": 2,
+      "actions": {
+        "Raise": {
+          "count": 5,
+          "total_net": 26256,
+          "avg_net": 5251
+        }
+      },
+      "data_driven_best": "Raise",
+      "data_driven_best_avg": 5251
+    },
+    "MP|Good|3 Aggressive|flop": {
+      "position": "MP",
+      "category": "Good",
+      "opponents": "3 Aggressive",
+      "stage": "flop",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Good|3 Aggressive|turn": {
+      "position": "MP",
+      "category": "Good",
+      "opponents": "3 Aggressive",
+      "stage": "turn",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Good|3 Aggressive|river": {
+      "position": "MP",
+      "category": "Good",
+      "opponents": "3 Aggressive",
+      "stage": "river",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Good|1 Weak + 2 Agg|preflop": {
+      "position": "MP",
+      "category": "Good",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "preflop",
+      "theoretical": "Raise",
+      "total_hands": 16,
+      "total_net": 1113601,
+      "wins": 10,
+      "losses": 5,
+      "actions": {
+        "All-In": {
+          "count": 6,
+          "total_net": 995264,
+          "avg_net": 165877
+        },
+        "Fold": {
+          "count": 1,
+          "total_net": -150,
+          "avg_net": -150
+        },
+        "Call": {
+          "count": 5,
+          "total_net": 44397,
+          "avg_net": 8879
+        },
+        "Raise": {
+          "count": 4,
+          "total_net": 74090,
+          "avg_net": 18522
+        }
+      },
+      "data_driven_best": "All-In",
+      "data_driven_best_avg": 165877
+    },
+    "MP|Good|1 Weak + 2 Agg|flop": {
+      "position": "MP",
+      "category": "Good",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "flop",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Good|1 Weak + 2 Agg|turn": {
+      "position": "MP",
+      "category": "Good",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "turn",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Good|1 Weak + 2 Agg|river": {
+      "position": "MP",
+      "category": "Good",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "river",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Good|2 Weak + 1 Agg|preflop": {
+      "position": "MP",
+      "category": "Good",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "preflop",
+      "theoretical": "Raise",
+      "total_hands": 17,
+      "total_net": 121117,
+      "wins": 10,
+      "losses": 4,
+      "actions": {
+        "All-In": {
+          "count": 2,
+          "total_net": 10940,
+          "avg_net": 5470
+        },
+        "Raise": {
+          "count": 13,
+          "total_net": 112017,
+          "avg_net": 8617
+        },
+        "Call": {
+          "count": 1,
+          "total_net": -40,
+          "avg_net": -40
+        },
+        "Fold": {
+          "count": 1,
+          "total_net": -1800,
+          "avg_net": -1800
+        }
+      },
+      "data_driven_best": "Raise",
+      "data_driven_best_avg": 8617
+    },
+    "MP|Good|2 Weak + 1 Agg|flop": {
+      "position": "MP",
+      "category": "Good",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "flop",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Good|2 Weak + 1 Agg|turn": {
+      "position": "MP",
+      "category": "Good",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "turn",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Good|2 Weak + 1 Agg|river": {
+      "position": "MP",
+      "category": "Good",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "river",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Good|3 Weak|preflop": {
+      "position": "MP",
+      "category": "Good",
+      "opponents": "3 Weak",
+      "stage": "preflop",
+      "theoretical": "Raise",
+      "total_hands": 8,
+      "total_net": -5380,
+      "wins": 3,
+      "losses": 2,
+      "actions": {
+        "Call": {
+          "count": 7,
+          "total_net": -4840,
+          "avg_net": -691
+        },
+        "Fold": {
+          "count": 1,
+          "total_net": -540,
+          "avg_net": -540
+        }
+      },
+      "data_driven_best": "Call",
+      "data_driven_best_avg": -691
+    },
+    "MP|Good|3 Weak|flop": {
+      "position": "MP",
+      "category": "Good",
+      "opponents": "3 Weak",
+      "stage": "flop",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Good|3 Weak|turn": {
+      "position": "MP",
+      "category": "Good",
+      "opponents": "3 Weak",
+      "stage": "turn",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Good|3 Weak|river": {
+      "position": "MP",
+      "category": "Good",
+      "opponents": "3 Weak",
+      "stage": "river",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Medium|3 Aggressive|preflop": {
+      "position": "MP",
+      "category": "Medium",
+      "opponents": "3 Aggressive",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 10,
+      "total_net": 8445,
+      "wins": 1,
+      "losses": 1,
+      "actions": {
+        "Fold": {
+          "count": 3,
+          "total_net": -158,
+          "avg_net": -53
+        },
+        "Call": {
+          "count": 5,
+          "total_net": 10410,
+          "avg_net": 2082
+        },
+        "Raise": {
+          "count": 2,
+          "total_net": -1807,
+          "avg_net": -904
+        }
+      },
+      "data_driven_best": "Call",
+      "data_driven_best_avg": 2082
+    },
+    "MP|Medium|3 Aggressive|flop": {
+      "position": "MP",
+      "category": "Medium",
+      "opponents": "3 Aggressive",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Medium|3 Aggressive|turn": {
+      "position": "MP",
+      "category": "Medium",
+      "opponents": "3 Aggressive",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Medium|3 Aggressive|river": {
+      "position": "MP",
+      "category": "Medium",
+      "opponents": "3 Aggressive",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Medium|1 Weak + 2 Agg|preflop": {
+      "position": "MP",
+      "category": "Medium",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 26,
+      "total_net": 40059,
+      "wins": 5,
+      "losses": 6,
+      "actions": {
+        "Call": {
+          "count": 10,
+          "total_net": 29833,
+          "avg_net": 2983
+        },
+        "All-In": {
+          "count": 2,
+          "total_net": -5280,
+          "avg_net": -2640
+        },
+        "Fold": {
+          "count": 8,
+          "total_net": -1663,
+          "avg_net": -208
+        },
+        "Raise": {
+          "count": 6,
+          "total_net": 17169,
+          "avg_net": 2862
+        }
+      },
+      "data_driven_best": "Call",
+      "data_driven_best_avg": 2983
+    },
+    "MP|Medium|1 Weak + 2 Agg|flop": {
+      "position": "MP",
+      "category": "Medium",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Medium|1 Weak + 2 Agg|turn": {
+      "position": "MP",
+      "category": "Medium",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Medium|1 Weak + 2 Agg|river": {
+      "position": "MP",
+      "category": "Medium",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Medium|2 Weak + 1 Agg|preflop": {
+      "position": "MP",
+      "category": "Medium",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "preflop",
+      "theoretical": "Call",
+      "total_hands": 94,
+      "total_net": 2380429,
+      "wins": 35,
+      "losses": 10,
+      "actions": {
+        "Call": {
+          "count": 41,
+          "total_net": 1990024,
+          "avg_net": 48537
+        },
+        "Raise": {
+          "count": 33,
+          "total_net": 304700,
+          "avg_net": 9233
+        },
+        "Fold": {
+          "count": 18,
+          "total_net": -11615,
+          "avg_net": -645
+        },
+        "All-In": {
+          "count": 2,
+          "total_net": 97320,
+          "avg_net": 48660
+        }
+      },
+      "data_driven_best": "Call",
+      "data_driven_best_avg": 48537
+    },
+    "MP|Medium|2 Weak + 1 Agg|flop": {
+      "position": "MP",
+      "category": "Medium",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "flop",
+      "theoretical": "Check-Fold",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Medium|2 Weak + 1 Agg|turn": {
+      "position": "MP",
+      "category": "Medium",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Medium|2 Weak + 1 Agg|river": {
+      "position": "MP",
+      "category": "Medium",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Medium|3 Weak|preflop": {
+      "position": "MP",
+      "category": "Medium",
+      "opponents": "3 Weak",
+      "stage": "preflop",
+      "theoretical": "Call",
+      "total_hands": 58,
+      "total_net": 540062,
+      "wins": 16,
+      "losses": 8,
+      "actions": {
+        "Call": {
+          "count": 52,
+          "total_net": 541001,
+          "avg_net": 10404
+        },
+        "Fold": {
+          "count": 6,
+          "total_net": -939,
+          "avg_net": -156
+        }
+      },
+      "data_driven_best": "Call",
+      "data_driven_best_avg": 10404
+    },
+    "MP|Medium|3 Weak|flop": {
+      "position": "MP",
+      "category": "Medium",
+      "opponents": "3 Weak",
+      "stage": "flop",
+      "theoretical": "Check-Fold",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Medium|3 Weak|turn": {
+      "position": "MP",
+      "category": "Medium",
+      "opponents": "3 Weak",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Medium|3 Weak|river": {
+      "position": "MP",
+      "category": "Medium",
+      "opponents": "3 Weak",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Junk|3 Aggressive|preflop": {
+      "position": "MP",
+      "category": "Junk",
+      "opponents": "3 Aggressive",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 18,
+      "total_net": -190422,
+      "wins": 1,
+      "losses": 2,
+      "actions": {
+        "Fold": {
+          "count": 14,
+          "total_net": -195236,
+          "avg_net": -13945
+        },
+        "Call": {
+          "count": 3,
+          "total_net": -95,
+          "avg_net": -32
+        },
+        "Raise": {
+          "count": 1,
+          "total_net": 4909,
+          "avg_net": 4909
+        }
+      },
+      "data_driven_best": "Call",
+      "data_driven_best_avg": -32
+    },
+    "MP|Junk|3 Aggressive|flop": {
+      "position": "MP",
+      "category": "Junk",
+      "opponents": "3 Aggressive",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Junk|3 Aggressive|turn": {
+      "position": "MP",
+      "category": "Junk",
+      "opponents": "3 Aggressive",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Junk|3 Aggressive|river": {
+      "position": "MP",
+      "category": "Junk",
+      "opponents": "3 Aggressive",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Junk|1 Weak + 2 Agg|preflop": {
+      "position": "MP",
+      "category": "Junk",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 117,
+      "total_net": -206185,
+      "wins": 8,
+      "losses": 9,
+      "actions": {
+        "Call": {
+          "count": 14,
+          "total_net": -18602,
+          "avg_net": -1329
+        },
+        "Fold": {
+          "count": 83,
+          "total_net": -152388,
+          "avg_net": -1836
+        },
+        "All-In": {
+          "count": 4,
+          "total_net": 27665,
+          "avg_net": 6916
+        },
+        "Raise": {
+          "count": 16,
+          "total_net": -62860,
+          "avg_net": -3929
+        }
+      },
+      "data_driven_best": "All-In",
+      "data_driven_best_avg": 6916
+    },
+    "MP|Junk|1 Weak + 2 Agg|flop": {
+      "position": "MP",
+      "category": "Junk",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Junk|1 Weak + 2 Agg|turn": {
+      "position": "MP",
+      "category": "Junk",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Junk|1 Weak + 2 Agg|river": {
+      "position": "MP",
+      "category": "Junk",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Junk|2 Weak + 1 Agg|preflop": {
+      "position": "MP",
+      "category": "Junk",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 556,
+      "total_net": 789318,
+      "wins": 67,
+      "losses": 23,
+      "actions": {
+        "Fold": {
+          "count": 396,
+          "total_net": -474077,
+          "avg_net": -1197
+        },
+        "Call": {
+          "count": 99,
+          "total_net": 538238,
+          "avg_net": 5437
+        },
+        "Raise": {
+          "count": 54,
+          "total_net": -95959,
+          "avg_net": -1777
+        },
+        "All-In": {
+          "count": 7,
+          "total_net": 821116,
+          "avg_net": 117302
+        }
+      },
+      "data_driven_best": "All-In",
+      "data_driven_best_avg": 117302
+    },
+    "MP|Junk|2 Weak + 1 Agg|flop": {
+      "position": "MP",
+      "category": "Junk",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Junk|2 Weak + 1 Agg|turn": {
+      "position": "MP",
+      "category": "Junk",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Junk|2 Weak + 1 Agg|river": {
+      "position": "MP",
+      "category": "Junk",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Junk|3 Weak|preflop": {
+      "position": "MP",
+      "category": "Junk",
+      "opponents": "3 Weak",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 342,
+      "total_net": 166769,
+      "wins": 54,
+      "losses": 9,
+      "actions": {
+        "Call": {
+          "count": 125,
+          "total_net": 371966,
+          "avg_net": 2976
+        },
+        "Fold": {
+          "count": 213,
+          "total_net": -198507,
+          "avg_net": -932
+        },
+        "Check": {
+          "count": 4,
+          "total_net": -6690,
+          "avg_net": -1672
+        }
+      },
+      "data_driven_best": "Call",
+      "data_driven_best_avg": 2976
+    },
+    "MP|Junk|3 Weak|flop": {
+      "position": "MP",
+      "category": "Junk",
+      "opponents": "3 Weak",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Junk|3 Weak|turn": {
+      "position": "MP",
+      "category": "Junk",
+      "opponents": "3 Weak",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "MP|Junk|3 Weak|river": {
+      "position": "MP",
+      "category": "Junk",
+      "opponents": "3 Weak",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Good|3 Aggressive|preflop": {
+      "position": "LP",
+      "category": "Good",
+      "opponents": "3 Aggressive",
+      "stage": "preflop",
+      "theoretical": "Raise",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Good|3 Aggressive|flop": {
+      "position": "LP",
+      "category": "Good",
+      "opponents": "3 Aggressive",
+      "stage": "flop",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Good|3 Aggressive|turn": {
+      "position": "LP",
+      "category": "Good",
+      "opponents": "3 Aggressive",
+      "stage": "turn",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Good|3 Aggressive|river": {
+      "position": "LP",
+      "category": "Good",
+      "opponents": "3 Aggressive",
+      "stage": "river",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Good|1 Weak + 2 Agg|preflop": {
+      "position": "LP",
+      "category": "Good",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "preflop",
+      "theoretical": "Raise",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Good|1 Weak + 2 Agg|flop": {
+      "position": "LP",
+      "category": "Good",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "flop",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Good|1 Weak + 2 Agg|turn": {
+      "position": "LP",
+      "category": "Good",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "turn",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Good|1 Weak + 2 Agg|river": {
+      "position": "LP",
+      "category": "Good",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "river",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Good|2 Weak + 1 Agg|preflop": {
+      "position": "LP",
+      "category": "Good",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "preflop",
+      "theoretical": "Raise",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Good|2 Weak + 1 Agg|flop": {
+      "position": "LP",
+      "category": "Good",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "flop",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Good|2 Weak + 1 Agg|turn": {
+      "position": "LP",
+      "category": "Good",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "turn",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Good|2 Weak + 1 Agg|river": {
+      "position": "LP",
+      "category": "Good",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "river",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Good|3 Weak|preflop": {
+      "position": "LP",
+      "category": "Good",
+      "opponents": "3 Weak",
+      "stage": "preflop",
+      "theoretical": "Raise",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Good|3 Weak|flop": {
+      "position": "LP",
+      "category": "Good",
+      "opponents": "3 Weak",
+      "stage": "flop",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Good|3 Weak|turn": {
+      "position": "LP",
+      "category": "Good",
+      "opponents": "3 Weak",
+      "stage": "turn",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Good|3 Weak|river": {
+      "position": "LP",
+      "category": "Good",
+      "opponents": "3 Weak",
+      "stage": "river",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Medium|3 Aggressive|preflop": {
+      "position": "LP",
+      "category": "Medium",
+      "opponents": "3 Aggressive",
+      "stage": "preflop",
+      "theoretical": "Raise",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Medium|3 Aggressive|flop": {
+      "position": "LP",
+      "category": "Medium",
+      "opponents": "3 Aggressive",
+      "stage": "flop",
+      "theoretical": "Check",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Medium|3 Aggressive|turn": {
+      "position": "LP",
+      "category": "Medium",
+      "opponents": "3 Aggressive",
+      "stage": "turn",
+      "theoretical": "Check-Fold",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Medium|3 Aggressive|river": {
+      "position": "LP",
+      "category": "Medium",
+      "opponents": "3 Aggressive",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Medium|1 Weak + 2 Agg|preflop": {
+      "position": "LP",
+      "category": "Medium",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "preflop",
+      "theoretical": "Raise",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Medium|1 Weak + 2 Agg|flop": {
+      "position": "LP",
+      "category": "Medium",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "flop",
+      "theoretical": "Check",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Medium|1 Weak + 2 Agg|turn": {
+      "position": "LP",
+      "category": "Medium",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "turn",
+      "theoretical": "Check-Fold",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Medium|1 Weak + 2 Agg|river": {
+      "position": "LP",
+      "category": "Medium",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Medium|2 Weak + 1 Agg|preflop": {
+      "position": "LP",
+      "category": "Medium",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "preflop",
+      "theoretical": "Raise",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Medium|2 Weak + 1 Agg|flop": {
+      "position": "LP",
+      "category": "Medium",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "flop",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Medium|2 Weak + 1 Agg|turn": {
+      "position": "LP",
+      "category": "Medium",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "turn",
+      "theoretical": "Check",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Medium|2 Weak + 1 Agg|river": {
+      "position": "LP",
+      "category": "Medium",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "river",
+      "theoretical": "Check-Fold",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Medium|3 Weak|preflop": {
+      "position": "LP",
+      "category": "Medium",
+      "opponents": "3 Weak",
+      "stage": "preflop",
+      "theoretical": "Raise",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Medium|3 Weak|flop": {
+      "position": "LP",
+      "category": "Medium",
+      "opponents": "3 Weak",
+      "stage": "flop",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Medium|3 Weak|turn": {
+      "position": "LP",
+      "category": "Medium",
+      "opponents": "3 Weak",
+      "stage": "turn",
+      "theoretical": "Check",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Medium|3 Weak|river": {
+      "position": "LP",
+      "category": "Medium",
+      "opponents": "3 Weak",
+      "stage": "river",
+      "theoretical": "Check-Fold",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Junk|3 Aggressive|preflop": {
+      "position": "LP",
+      "category": "Junk",
+      "opponents": "3 Aggressive",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Junk|3 Aggressive|flop": {
+      "position": "LP",
+      "category": "Junk",
+      "opponents": "3 Aggressive",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Junk|3 Aggressive|turn": {
+      "position": "LP",
+      "category": "Junk",
+      "opponents": "3 Aggressive",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Junk|3 Aggressive|river": {
+      "position": "LP",
+      "category": "Junk",
+      "opponents": "3 Aggressive",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Junk|1 Weak + 2 Agg|preflop": {
+      "position": "LP",
+      "category": "Junk",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Junk|1 Weak + 2 Agg|flop": {
+      "position": "LP",
+      "category": "Junk",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Junk|1 Weak + 2 Agg|turn": {
+      "position": "LP",
+      "category": "Junk",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Junk|1 Weak + 2 Agg|river": {
+      "position": "LP",
+      "category": "Junk",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Junk|2 Weak + 1 Agg|preflop": {
+      "position": "LP",
+      "category": "Junk",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Junk|2 Weak + 1 Agg|flop": {
+      "position": "LP",
+      "category": "Junk",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Junk|2 Weak + 1 Agg|turn": {
+      "position": "LP",
+      "category": "Junk",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Junk|2 Weak + 1 Agg|river": {
+      "position": "LP",
+      "category": "Junk",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Junk|3 Weak|preflop": {
+      "position": "LP",
+      "category": "Junk",
+      "opponents": "3 Weak",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Junk|3 Weak|flop": {
+      "position": "LP",
+      "category": "Junk",
+      "opponents": "3 Weak",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Junk|3 Weak|turn": {
+      "position": "LP",
+      "category": "Junk",
+      "opponents": "3 Weak",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "LP|Junk|3 Weak|river": {
+      "position": "LP",
+      "category": "Junk",
+      "opponents": "3 Weak",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Good|3 Aggressive|preflop": {
+      "position": "Blinds",
+      "category": "Good",
+      "opponents": "3 Aggressive",
+      "stage": "preflop",
+      "theoretical": "3-Bet",
+      "total_hands": 11,
+      "total_net": 815694,
+      "wins": 8,
+      "losses": 2,
+      "actions": {
+        "Raise": {
+          "count": 5,
+          "total_net": 691458,
+          "avg_net": 138292
+        },
+        "All-In": {
+          "count": 6,
+          "total_net": 124236,
+          "avg_net": 20706
+        }
+      },
+      "data_driven_best": "Raise",
+      "data_driven_best_avg": 138292
+    },
+    "Blinds|Good|3 Aggressive|flop": {
+      "position": "Blinds",
+      "category": "Good",
+      "opponents": "3 Aggressive",
+      "stage": "flop",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Good|3 Aggressive|turn": {
+      "position": "Blinds",
+      "category": "Good",
+      "opponents": "3 Aggressive",
+      "stage": "turn",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Good|3 Aggressive|river": {
+      "position": "Blinds",
+      "category": "Good",
+      "opponents": "3 Aggressive",
+      "stage": "river",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Good|1 Weak + 2 Agg|preflop": {
+      "position": "Blinds",
+      "category": "Good",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "preflop",
+      "theoretical": "3-Bet",
+      "total_hands": 36,
+      "total_net": 2172229,
+      "wins": 22,
+      "losses": 10,
+      "actions": {
+        "All-In": {
+          "count": 16,
+          "total_net": 381754,
+          "avg_net": 23860
+        },
+        "Raise": {
+          "count": 15,
+          "total_net": 1439118,
+          "avg_net": 95941
+        },
+        "Call": {
+          "count": 5,
+          "total_net": 351357,
+          "avg_net": 70271
+        }
+      },
+      "data_driven_best": "Raise",
+      "data_driven_best_avg": 95941
+    },
+    "Blinds|Good|1 Weak + 2 Agg|flop": {
+      "position": "Blinds",
+      "category": "Good",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "flop",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Good|1 Weak + 2 Agg|turn": {
+      "position": "Blinds",
+      "category": "Good",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "turn",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Good|1 Weak + 2 Agg|river": {
+      "position": "Blinds",
+      "category": "Good",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "river",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Good|2 Weak + 1 Agg|preflop": {
+      "position": "Blinds",
+      "category": "Good",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "preflop",
+      "theoretical": "3-Bet",
+      "total_hands": 38,
+      "total_net": 173205,
+      "wins": 22,
+      "losses": 7,
+      "actions": {
+        "Raise": {
+          "count": 26,
+          "total_net": -176866,
+          "avg_net": -6803
+        },
+        "Call": {
+          "count": 9,
+          "total_net": 348000,
+          "avg_net": 38667
+        },
+        "All-In": {
+          "count": 3,
+          "total_net": 2071,
+          "avg_net": 690
+        }
+      },
+      "data_driven_best": "Call",
+      "data_driven_best_avg": 38667
+    },
+    "Blinds|Good|2 Weak + 1 Agg|flop": {
+      "position": "Blinds",
+      "category": "Good",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "flop",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Good|2 Weak + 1 Agg|turn": {
+      "position": "Blinds",
+      "category": "Good",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "turn",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Good|2 Weak + 1 Agg|river": {
+      "position": "Blinds",
+      "category": "Good",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "river",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Good|3 Weak|preflop": {
+      "position": "Blinds",
+      "category": "Good",
+      "opponents": "3 Weak",
+      "stage": "preflop",
+      "theoretical": "3-Bet",
+      "total_hands": 8,
+      "total_net": 17809,
+      "wins": 2,
+      "losses": 0,
+      "actions": {
+        "Call": {
+          "count": 5,
+          "total_net": 19190,
+          "avg_net": 3838
+        },
+        "Check": {
+          "count": 3,
+          "total_net": -1381,
+          "avg_net": -460
+        }
+      },
+      "data_driven_best": "Call",
+      "data_driven_best_avg": 3838
+    },
+    "Blinds|Good|3 Weak|flop": {
+      "position": "Blinds",
+      "category": "Good",
+      "opponents": "3 Weak",
+      "stage": "flop",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Good|3 Weak|turn": {
+      "position": "Blinds",
+      "category": "Good",
+      "opponents": "3 Weak",
+      "stage": "turn",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Good|3 Weak|river": {
+      "position": "Blinds",
+      "category": "Good",
+      "opponents": "3 Weak",
+      "stage": "river",
+      "theoretical": "Bet",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Medium|3 Aggressive|preflop": {
+      "position": "Blinds",
+      "category": "Medium",
+      "opponents": "3 Aggressive",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 7,
+      "total_net": 375582,
+      "wins": 2,
+      "losses": 3,
+      "actions": {
+        "Fold": {
+          "count": 2,
+          "total_net": -1670,
+          "avg_net": -835
+        },
+        "Raise": {
+          "count": 1,
+          "total_net": 33444,
+          "avg_net": 33444
+        },
+        "All-In": {
+          "count": 3,
+          "total_net": 344050,
+          "avg_net": 114683
+        },
+        "Call": {
+          "count": 1,
+          "total_net": -242,
+          "avg_net": -242
+        }
+      },
+      "data_driven_best": "All-In",
+      "data_driven_best_avg": 114683
+    },
+    "Blinds|Medium|3 Aggressive|flop": {
+      "position": "Blinds",
+      "category": "Medium",
+      "opponents": "3 Aggressive",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Medium|3 Aggressive|turn": {
+      "position": "Blinds",
+      "category": "Medium",
+      "opponents": "3 Aggressive",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Medium|3 Aggressive|river": {
+      "position": "Blinds",
+      "category": "Medium",
+      "opponents": "3 Aggressive",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Medium|1 Weak + 2 Agg|preflop": {
+      "position": "Blinds",
+      "category": "Medium",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 52,
+      "total_net": 12091251,
+      "wins": 9,
+      "losses": 18,
+      "actions": {
+        "Call": {
+          "count": 16,
+          "total_net": -201888,
+          "avg_net": -12618
+        },
+        "All-In": {
+          "count": 12,
+          "total_net": 12541549,
+          "avg_net": 1045129
+        },
+        "Raise": {
+          "count": 12,
+          "total_net": -47485,
+          "avg_net": -3957
+        },
+        "Fold": {
+          "count": 12,
+          "total_net": -200925,
+          "avg_net": -16744
+        }
+      },
+      "data_driven_best": "All-In",
+      "data_driven_best_avg": 1045129
+    },
+    "Blinds|Medium|1 Weak + 2 Agg|flop": {
+      "position": "Blinds",
+      "category": "Medium",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Medium|1 Weak + 2 Agg|turn": {
+      "position": "Blinds",
+      "category": "Medium",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Medium|1 Weak + 2 Agg|river": {
+      "position": "Blinds",
+      "category": "Medium",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Medium|2 Weak + 1 Agg|preflop": {
+      "position": "Blinds",
+      "category": "Medium",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "preflop",
+      "theoretical": "Call",
+      "total_hands": 188,
+      "total_net": -395937,
+      "wins": 71,
+      "losses": 12,
+      "actions": {
+        "Call": {
+          "count": 111,
+          "total_net": -249895,
+          "avg_net": -2251
+        },
+        "Raise": {
+          "count": 39,
+          "total_net": -78282,
+          "avg_net": -2007
+        },
+        "Fold": {
+          "count": 33,
+          "total_net": -174570,
+          "avg_net": -5290
+        },
+        "All-In": {
+          "count": 5,
+          "total_net": 106810,
+          "avg_net": 21362
+        }
+      },
+      "data_driven_best": "All-In",
+      "data_driven_best_avg": 21362
+    },
+    "Blinds|Medium|2 Weak + 1 Agg|flop": {
+      "position": "Blinds",
+      "category": "Medium",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "flop",
+      "theoretical": "Check-Fold",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Medium|2 Weak + 1 Agg|turn": {
+      "position": "Blinds",
+      "category": "Medium",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Medium|2 Weak + 1 Agg|river": {
+      "position": "Blinds",
+      "category": "Medium",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Medium|3 Weak|preflop": {
+      "position": "Blinds",
+      "category": "Medium",
+      "opponents": "3 Weak",
+      "stage": "preflop",
+      "theoretical": "Call",
+      "total_hands": 78,
+      "total_net": 287083,
+      "wins": 30,
+      "losses": 9,
+      "actions": {
+        "Call": {
+          "count": 62,
+          "total_net": 393154,
+          "avg_net": 6341
+        },
+        "Check": {
+          "count": 13,
+          "total_net": -66126,
+          "avg_net": -5087
+        },
+        "Fold": {
+          "count": 3,
+          "total_net": -39945,
+          "avg_net": -13315
+        }
+      },
+      "data_driven_best": "Call",
+      "data_driven_best_avg": 6341
+    },
+    "Blinds|Medium|3 Weak|flop": {
+      "position": "Blinds",
+      "category": "Medium",
+      "opponents": "3 Weak",
+      "stage": "flop",
+      "theoretical": "Check-Fold",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Medium|3 Weak|turn": {
+      "position": "Blinds",
+      "category": "Medium",
+      "opponents": "3 Weak",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Medium|3 Weak|river": {
+      "position": "Blinds",
+      "category": "Medium",
+      "opponents": "3 Weak",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Junk|3 Aggressive|preflop": {
+      "position": "Blinds",
+      "category": "Junk",
+      "opponents": "3 Aggressive",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 27,
+      "total_net": 141306,
+      "wins": 7,
+      "losses": 2,
+      "actions": {
+        "Raise": {
+          "count": 6,
+          "total_net": 81578,
+          "avg_net": 13596
+        },
+        "Fold": {
+          "count": 14,
+          "total_net": -23627,
+          "avg_net": -1688
+        },
+        "Call": {
+          "count": 7,
+          "total_net": 83355,
+          "avg_net": 11908
+        }
+      },
+      "data_driven_best": "Raise",
+      "data_driven_best_avg": 13596
+    },
+    "Blinds|Junk|3 Aggressive|flop": {
+      "position": "Blinds",
+      "category": "Junk",
+      "opponents": "3 Aggressive",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Junk|3 Aggressive|turn": {
+      "position": "Blinds",
+      "category": "Junk",
+      "opponents": "3 Aggressive",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Junk|3 Aggressive|river": {
+      "position": "Blinds",
+      "category": "Junk",
+      "opponents": "3 Aggressive",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Junk|1 Weak + 2 Agg|preflop": {
+      "position": "Blinds",
+      "category": "Junk",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 238,
+      "total_net": -147165,
+      "wins": 26,
+      "losses": 18,
+      "actions": {
+        "Raise": {
+          "count": 21,
+          "total_net": 625218,
+          "avg_net": 29772
+        },
+        "Fold": {
+          "count": 169,
+          "total_net": -1163693,
+          "avg_net": -6886
+        },
+        "Call": {
+          "count": 31,
+          "total_net": 214860,
+          "avg_net": 6931
+        },
+        "All-In": {
+          "count": 17,
+          "total_net": 176450,
+          "avg_net": 10379
+        }
+      },
+      "data_driven_best": "Raise",
+      "data_driven_best_avg": 29772
+    },
+    "Blinds|Junk|1 Weak + 2 Agg|flop": {
+      "position": "Blinds",
+      "category": "Junk",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Junk|1 Weak + 2 Agg|turn": {
+      "position": "Blinds",
+      "category": "Junk",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Junk|1 Weak + 2 Agg|river": {
+      "position": "Blinds",
+      "category": "Junk",
+      "opponents": "1 Weak + 2 Agg",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Junk|2 Weak + 1 Agg|preflop": {
+      "position": "Blinds",
+      "category": "Junk",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 1195,
+      "total_net": -3487860,
+      "wins": 156,
+      "losses": 62,
+      "actions": {
+        "Raise": {
+          "count": 77,
+          "total_net": 194182,
+          "avg_net": 2522
+        },
+        "Call": {
+          "count": 372,
+          "total_net": -193711,
+          "avg_net": -521
+        },
+        "Fold": {
+          "count": 734,
+          "total_net": -3800172,
+          "avg_net": -5177
+        },
+        "All-In": {
+          "count": 12,
+          "total_net": 311841,
+          "avg_net": 25987
+        }
+      },
+      "data_driven_best": "All-In",
+      "data_driven_best_avg": 25987
+    },
+    "Blinds|Junk|2 Weak + 1 Agg|flop": {
+      "position": "Blinds",
+      "category": "Junk",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Junk|2 Weak + 1 Agg|turn": {
+      "position": "Blinds",
+      "category": "Junk",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Junk|2 Weak + 1 Agg|river": {
+      "position": "Blinds",
+      "category": "Junk",
+      "opponents": "2 Weak + 1 Agg",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Junk|3 Weak|preflop": {
+      "position": "Blinds",
+      "category": "Junk",
+      "opponents": "3 Weak",
+      "stage": "preflop",
+      "theoretical": "Fold",
+      "total_hands": 636,
+      "total_net": -3620686,
+      "wins": 125,
+      "losses": 54,
+      "actions": {
+        "Call": {
+          "count": 253,
+          "total_net": -1989029,
+          "avg_net": -7862
+        },
+        "Check": {
+          "count": 184,
+          "total_net": -296334,
+          "avg_net": -1611
+        },
+        "Fold": {
+          "count": 199,
+          "total_net": -1335323,
+          "avg_net": -6710
+        }
+      },
+      "data_driven_best": "Check",
+      "data_driven_best_avg": -1611
+    },
+    "Blinds|Junk|3 Weak|flop": {
+      "position": "Blinds",
+      "category": "Junk",
+      "opponents": "3 Weak",
+      "stage": "flop",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Junk|3 Weak|turn": {
+      "position": "Blinds",
+      "category": "Junk",
+      "opponents": "3 Weak",
+      "stage": "turn",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    },
+    "Blinds|Junk|3 Weak|river": {
+      "position": "Blinds",
+      "category": "Junk",
+      "opponents": "3 Weak",
+      "stage": "river",
+      "theoretical": "N/A",
+      "total_hands": 0,
+      "total_net": 0,
+      "wins": 0,
+      "losses": 0,
+      "actions": {},
+      "data_driven_best": null,
+      "data_driven_best_avg": null
+    }
+  }
+}

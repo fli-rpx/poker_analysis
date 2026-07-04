@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poker Decision Flowchart</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  * { font-family: 'Inter', sans-serif; }
+  .btn-selector { transition: all 0.2s ease; }
+  .btn-selector:hover { transform: translateY(-1px); }
+  .btn-selector.active { 
+    background: linear-gradient(135deg, rgba(5,150,105,0.3), rgba(5,150,105,0.15)) !important;
+    border-color: rgb(5,150,105) !important;
+    box-shadow: 0 0 20px rgba(5,150,105,0.2);
+  }
+  .chip-positive { color: #4ade80; }
+  .chip-negative { color: #f87171; }
+  .fade-in { animation: fadeIn 0.3s ease-in; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  .card-hover { transition: all 0.2s ease; }
+  .card-hover:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+  .glow-green { box-shadow: 0 0 15px rgba(74,222,128,0.15); }
+  .glow-red { box-shadow: 0 0 15px rgba(248,113,113,0.15); }
+  .bar-bg { background: linear-gradient(90deg, rgba(5,150,105,0.1), transparent); }
+</style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-[#0a1f0a] via-[#0d2818] to-[#0a1f14] text-white">
+
+<header class="border-b border-emerald-900/50 bg-black/20 backdrop-blur-sm">
+  <div class="max-w-6xl mx-auto px-4 py-5">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center shadow-lg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-white"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/></svg>
+      </div>
+      <div>
+        <h1 class="text-2xl font-bold tracking-tight text-emerald-50">Poker Decision Flowchart</h1>
+        <p class="text-sm text-emerald-400/70">4-handed game · Data from 7,911 hands</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-4 py-6 space-y-6">
+  <!-- Selectors -->
+  <section>
+    <h2 class="text-lg font-semibold text-emerald-100 mb-4 flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-400"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+      Your Situation
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+      <!-- Position -->
+      <div class="rounded-xl border border-emerald-800/40 bg-black/30 backdrop-blur-sm p-4">
+        <div class="flex items-center gap-2 mb-3 text-emerald-400">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>
+          <span class="text-xs font-semibold uppercase tracking-wider">Position</span>
+        </div>
+        <div class="space-y-1.5" id="position-btns">
+          <button onclick="select('position','EP')" data-val="EP" class="btn-selector w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium border bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20">
+            <div class="flex items-center justify-between"><span>EP</span></div>
+            <div class="text-[10px] text-gray-500 mt-0.5">Early Position</div>
+          </button>
+          <button onclick="select('position','MP')" data-val="MP" class="btn-selector w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium border bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20">
+            <div class="flex items-center justify-between"><span>MP</span></div>
+            <div class="text-[10px] text-gray-500 mt-0.5">Middle Position</div>
+          </button>
+          <button onclick="select('position','LP')" data-val="LP" class="btn-selector w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium border bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20">
+            <div class="flex items-center justify-between"><span>LP</span></div>
+            <div class="text-[10px] text-gray-500 mt-0.5">Cutoff / Button</div>
+          </button>
+          <button onclick="select('position','Blinds')" data-val="Blinds" class="btn-selector w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium border bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20">
+            <div class="flex items-center justify-between"><span>Blinds</span></div>
+            <div class="text-[10px] text-gray-500 mt-0.5">Small / Big Blind</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Hand -->
+      <div class="rounded-xl border border-emerald-800/40 bg-black/30 backdrop-blur-sm p-4">
+        <div class="flex items-center gap-2 mb-3 text-emerald-400">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 12c0 4.4-3.6 8-8 8A4.5 4.5 0 0 1 5 15.5c0-6 8-4 8-8.5a3 3 0 1 0-6 0c0 3 2.5 8.5 12 13"/><path d="M16 12h3"/></svg>
+          <span class="text-xs font-semibold uppercase tracking-wider">Hand</span>
+        </div>
+        <div class="space-y-1.5" id="hand-btns">
+          <button onclick="select('category','Good')" data-val="Good" class="btn-selector w-full text-left px-3 py-2 rounded-lg text-sm font-medium border bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20">
+            <span>Good</span>
+            <div class="text-[10px] text-gray-500">TT+, AQs+, AKo+</div>
+          </button>
+          <button onclick="select('category','Medium')" data-val="Medium" class="btn-selector w-full text-left px-3 py-2 rounded-lg text-sm font-medium border bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20">
+            <span>Medium</span>
+            <div class="text-[10px] text-gray-500">22-99, 45s-KQs</div>
+          </button>
+          <button onclick="select('category','Junk')" data-val="Junk" class="btn-selector w-full text-left px-3 py-2 rounded-lg text-sm font-medium border bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20">
+            <span>Junk</span>
+            <div class="text-[10px] text-gray-500">Everything else</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Opponents -->
+      <div class="rounded-xl border border-emerald-800/40 bg-black/30 backdrop-blur-sm p-4">
+        <div class="flex items-center gap-2 mb-3 text-emerald-400">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span class="text-xs font-semibold uppercase tracking-wider">Opponents</span>
+        </div>
+        <div class="space-y-1.5" id="opponents-btns">
+          <button onclick="select('opponents','3 Aggressive')" data-val="3 Aggressive" class="btn-selector w-full text-left px-3 py-1.5 rounded-lg text-xs font-medium border bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20">
+            <span>3 Aggressive</span>
+            <div class="text-[9px] text-gray-500">All 3 play aggressively</div>
+          </button>
+          <button onclick="select('opponents','1 Weak + 2 Agg')" data-val="1 Weak + 2 Agg" class="btn-selector w-full text-left px-3 py-1.5 rounded-lg text-xs font-medium border bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20">
+            <span>1 Weak + 2 Agg</span>
+            <div class="text-[9px] text-gray-500">One passive</div>
+          </button>
+          <button onclick="select('opponents','2 Weak + 1 Agg')" data-val="2 Weak + 1 Agg" class="btn-selector w-full text-left px-3 py-1.5 rounded-lg text-xs font-medium border bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20">
+            <span>2 Weak + 1 Agg</span>
+            <div class="text-[9px] text-gray-500">Two passive</div>
+          </button>
+          <button onclick="select('opponents','3 Weak')" data-val="3 Weak" class="btn-selector w-full text-left px-3 py-1.5 rounded-lg text-xs font-medium border bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20">
+            <span>3 Weak</span>
+            <div class="text-[9px] text-gray-500">All passive</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Stage -->
+      <div class="rounded-xl border border-emerald-800/40 bg-black/30 backdrop-blur-sm p-4">
+        <div class="flex items-center gap-2 mb-3 text-emerald-400">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <span class="text-xs font-semibold uppercase tracking-wider">Stage</span>
+        </div>
+        <div class="space-y-1.5" id="stage-btns">
+          <button onclick="select('stage','preflop')" data-val="preflop" class="btn-selector w-full text-left px-3 py-2 rounded-lg text-sm font-medium border bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20">
+            <span>Pre-flop</span>
+          </button>
+          <button onclick="select('stage','flop')" data-val="flop" class="btn-selector w-full text-left px-3 py-2 rounded-lg text-sm font-medium border bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20">
+            <span>Flop</span>
+          </button>
+          <button onclick="select('stage','turn')" data-val="turn" class="btn-selector w-full text-left px-3 py-2 rounded-lg text-sm font-medium border bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20">
+            <span>Turn</span>
+          </button>
+          <button onclick="select('stage','river')" data-val="river" class="btn-selector w-full text-left px-3 py-2 rounded-lg text-sm font-medium border bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20">
+            <span>River</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section id="results" class="hidden fade-in">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <!-- Card 1: Strategy Guide -->
+      <div id="theory-card" class="rounded-xl border border-emerald-800/40 bg-black/40 backdrop-blur-sm p-6 card-hover">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">📖</span>
+          <div>
+            <h3 class="font-semibold text-emerald-100">Strategy Guide</h3>
+            <p class="text-xs text-emerald-500/60">Standard 4-handed GTO recommendation</p>
+          </div>
+        </div>
+        <div id="theory-action" class="text-4xl font-bold text-emerald-300 mb-2">—</div>
+        <div id="theory-desc" class="text-sm text-gray-400"></div>
+      </div>
+
+      <!-- Card 2: Your Data -->
+      <div id="data-card" class="rounded-xl border border-emerald-800/40 bg-black/40 backdrop-blur-sm p-6 card-hover">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">📊</span>
+          <div>
+            <h3 class="font-semibold text-emerald-100">Your Track Record</h3>
+            <p class="text-xs text-emerald-500/60">Based on your actual play data</p>
+          </div>
+        </div>
+        
+        <!-- Data-driven best action -->
+        <div id="data-best-section" class="mb-4">
+          <div id="data-best-action" class="text-4xl font-bold text-emerald-300 mb-1">—</div>
+          <div id="data-avg-net" class="text-lg font-semibold"></div>
+          <div id="data-confidence" class="text-sm mt-1"></div>
+        </div>
+
+        <!-- Agreement badge -->
+        <div id="agreement-badge" class="mb-4"></div>
+
+        <!-- Insufficient data message -->
+        <div id="insufficient-msg" class="hidden text-sm text-amber-400 bg-amber-400/10 rounded-lg p-3 border border-amber-400/20">
+          ⚪ Not enough data — follow the <strong>Strategy Guide</strong> for now
+        </div>
+
+        <!-- Action comparison table -->
+        <div id="action-table-section" class="mt-4">
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Action Comparison</h4>
+          <div id="action-table" class="space-y-1.5"></div>
+        </div>
+
+        <!-- By the numbers -->
+        <div id="by-numbers" class="mt-4 pt-4 border-t border-emerald-800/30">
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">By the Numbers</h4>
+          <div class="grid grid-cols-3 gap-3 text-center">
+            <div>
+              <div id="bn-hands" class="text-lg font-bold text-emerald-200">0</div>
+              <div class="text-[10px] text-gray-500">Hands</div>
+            </div>
+            <div>
+              <div id="bn-net" class="text-lg font-bold">0</div>
+              <div class="text-[10px] text-gray-500">Net Chips</div>
+            </div>
+            <div>
+              <div id="bn-wins" class="text-lg font-bold text-emerald-200">0</div>
+              <div class="text-[10px] text-gray-500">Wins/Losses</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+const FLOW_DATA = {"meta": {"total_hands": 7911, "files_analyzed": 166, "generated": "2026-07-04"}, "flows": {"EP|Good|3 Aggressive|preflop": {"position": "EP", "category": "Good", "opponents": "3 Aggressive", "stage": "preflop", "theoretical": "Raise", "total_hands": 1, "total_net": 49370, "wins": 1, "losses": 0, "actions": {"Raise": {"count": 1, "total_net": 49370, "avg_net": 49370}}, "data_driven_best": null, "data_driven_best_avg": null}, "EP|Good|3 Aggressive|flop": {"position": "EP", "category": "Good", "opponents": "3 Aggressive", "stage": "flop", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "EP|Good|3 Aggressive|turn": {"position": "EP", "category": "Good", "opponents": "3 Aggressive", "stage": "turn", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "EP|Good|3 Aggressive|river": {"position": "EP", "category": "Good", "opponents": "3 Aggressive", "stage": "river", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "EP|Good|1 Weak + 2 Agg|preflop": {"position": "EP", "category": "Good", "opponents": "1 Weak + 2 Agg", "stage": "preflop", "theoretical": "Raise", "total_hands": 23, "total_net": 360403, "wins": 19, "losses": 4, "actions": {"Raise": {"count": 11, "total_net": 40570, "avg_net": 3688}, "All-In": {"count": 9, "total_net": 288498, "avg_net": 32055}, "Call": {"count": 3, "total_net": 31335, "avg_net": 10445}}, "data_driven_best": "All-In", "data_driven_best_avg": 32055}, "EP|Good|1 Weak + 2 Agg|flop": {"position": "EP", "category": "Good", "opponents": "1 Weak + 2 Agg", "stage": "flop", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "EP|Good|1 Weak + 2 Agg|turn": {"position": "EP", "category": "Good", "opponents": "1 Weak + 2 Agg", "stage": "turn", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "EP|Good|1 Weak + 2 Agg|river": {"position": "EP", "category": "Good", "opponents": "1 Weak + 2 Agg", "stage": "river", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "EP|Good|2 Weak + 1 Agg|preflop": {"position": "EP", "category": "Good", "opponents": "2 Weak + 1 Agg", "stage": "preflop", "theoretical": "Raise", "total_hands": 29, "total_net": 201888, "wins": 23, "losses": 1, "actions": {"Raise": {"count": 23, "total_net": 26352, "avg_net": 1146}, "All-In": {"count": 2, "total_net": 58716, "avg_net": 29358}, "Call": {"count": 4, "total_net": 116820, "avg_net": 29205}}, "data_driven_best": "Call", "data_driven_best_avg": 29205}, "EP|Good|2 Weak + 1 Agg|flop": {"position": "EP", "category": "Good", "opponents": "2 Weak + 1 Agg", "stage": "flop", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "EP|Good|2 Weak + 1 Agg|turn": {"position": "EP", "category": "Good", "opponents": "2 Weak + 1 Agg", "stage": "turn", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "EP|Good|2 Weak + 1 Agg|river": {"position": "EP", "category": "Good", "opponents": "2 Weak + 1 Agg", "stage": "river", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "EP|Good|3 Weak|preflop": {"position": "EP", "category": "Good", "opponents": "3 Weak", "stage": "preflop", "theoretical": "Raise", "total_hands": 5, "total_net": 14715, "wins": 2, "losses": 1, "actions": {"Call": {"count": 5, "total_net": 14715, "avg_net": 2943}}, "data_driven_best": "Call", "data_driven_best_avg": 2943}, "EP|Good|3 Weak|flop": {"position": "EP", "category": "Good", "opponents": "3 Weak", "stage": "flop", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "EP|Good|3 Weak|turn": {"position": "EP", "category": "Good", "opponents": "3 Weak", "stage": "turn", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "EP|Good|3 Weak|river": {"position": "EP", "category": "Good", "opponents": "3 Weak", "stage": "river", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "EP|Medium|3 Aggressive|preflop": {"position": "EP", "category": "Medium", "opponents": "3 Aggressive", "stage": "preflop", "theoretical": "Fold", "total_hands": 11, "total_net": -254840, "wins": 2, "losses": 2, "actions": {"Call": {"count": 5, "total_net": 27663, "avg_net": 5533}, "Raise": {"count": 3, "total_net": -1955, "avg_net": -652}, "Fold": {"count": 1, "total_net": -36, "avg_net": -36}, "All-In": {"count": 2, "total_net": -280512, "avg_net": -140256}}, "data_driven_best": "Call", "data_driven_best_avg": 5533}, "EP|Medium|1 Weak + 2 Agg|preflop": {"position": "EP", "category": "Medium", "opponents": "1 Weak + 2 Agg", "stage": "preflop", "theoretical": "Fold", "total_hands": 30, "total_net": 465051, "wins": 10, "losses": 3, "actions": {"Fold": {"count": 5, "total_net": -43620, "avg_net": -8724}, "Call": {"count": 13, "total_net": 834311, "avg_net": 64178}, "Raise": {"count": 9, "total_net": -414351, "avg_net": -46039}, "All-In": {"count": 3, "total_net": 88711, "avg_net": 29570}}, "data_driven_best": "Call", "data_driven_best_avg": 64178}, "EP|Medium|2 Weak + 1 Agg|preflop": {"position": "EP", "category": "Medium", "opponents": "2 Weak + 1 Agg", "stage": "preflop", "theoretical": "Call", "total_hands": 139, "total_net": -4443245, "wins": 43, "losses": 18, "actions": {"Call": {"count": 70, "total_net": -4662628, "avg_net": -66609}, "Raise": {"count": 37, "total_net": 217413, "avg_net": 5876}, "Fold": {"count": 30, "total_net": -79350, "avg_net": -2645}, "All-In": {"count": 2, "total_net": 81320, "avg_net": 40660}}, "data_driven_best": "Raise", "data_driven_best_avg": 5876}, "EP|Medium|2 Weak + 1 Agg|flop": {"position": "EP", "category": "Medium", "opponents": "2 Weak + 1 Agg", "stage": "flop", "theoretical": "Check-Fold", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "EP|Medium|3 Weak|preflop": {"position": "EP", "category": "Medium", "opponents": "3 Weak", "stage": "preflop", "theoretical": "Call", "total_hands": 61, "total_net": 68942, "wins": 24, "losses": 4, "actions": {"Check": {"count": 11, "total_net": 45583, "avg_net": 4144}, "Call": {"count": 40, "total_net": 118699, "avg_net": 2967}, "Fold": {"count": 10, "total_net": -95340, "avg_net": -9534}}, "data_driven_best": "Check", "data_driven_best_avg": 4144}, "EP|Medium|3 Weak|flop": {"position": "EP", "category": "Medium", "opponents": "3 Weak", "stage": "flop", "theoretical": "Check-Fold", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "EP|Junk|3 Aggressive|preflop": {"position": "EP", "category": "Junk", "opponents": "3 Aggressive", "stage": "preflop", "theoretical": "Fold", "total_hands": 20, "total_net": 22016, "wins": 3, "losses": 2, "actions": {"Fold": {"count": 7, "total_net": -4275, "avg_net": -611}, "Call": {"count": 8, "total_net": -1453, "avg_net": -182}, "Raise": {"count": 4, "total_net": 27789, "avg_net": 6947}, "All-In": {"count": 1, "total_net": -45, "avg_net": -45}}, "data_driven_best": "Raise", "data_driven_best_avg": 6947}, "EP|Junk|1 Weak + 2 Agg|preflop": {"position": "EP", "category": "Junk", "opponents": "1 Weak + 2 Agg", "stage": "preflop", "theoretical": "Fold", "total_hands": 162, "total_net": 2937296, "wins": 18, "losses": 9, "actions": {"Fold": {"count": 115, "total_net": -723089, "avg_net": -6288}, "Raise": {"count": 18, "total_net": 2822213, "avg_net": 156790}, "Call": {"count": 22, "total_net": 55861, "avg_net": 2539}, "All-In": {"count": 7, "total_net": 782311, "avg_net": 111759}}, "data_driven_best": "Raise", "data_driven_best_avg": 156790}, "EP|Junk|2 Weak + 1 Agg|preflop": {"position": "EP", "category": "Junk", "opponents": "2 Weak + 1 Agg", "stage": "preflop", "theoretical": "Fold", "total_hands": 756, "total_net": -4730009, "wins": 66, "losses": 32, "actions": {"Fold": {"count": 533, "total_net": -3196136, "avg_net": -5997}, "Call": {"count": 160, "total_net": -647264, "avg_net": -4045}, "Raise": {"count": 60, "total_net": -953009, "avg_net": -15883}, "All-In": {"count": 3, "total_net": 66400, "avg_net": 22133}}, "data_driven_best": "All-In", "data_driven_best_avg": 22133}, "EP|Junk|3 Weak|preflop": {"position": "EP", "category": "Junk", "opponents": "3 Weak", "stage": "preflop", "theoretical": "Fold", "total_hands": 389, "total_net": -355629, "wins": 49, "losses": 24, "actions": {"Call": {"count": 115, "total_net": 123588, "avg_net": 1075}, "Check": {"count": 58, "total_net": -158002, "avg_net": -2724}, "Fold": {"count": 216, "total_net": -321215, "avg_net": -1487}}, "data_driven_best": "Call", "data_driven_best_avg": 1075}, "MP|Good|3 Aggressive|preflop": {"position": "MP", "category": "Good", "opponents": "3 Aggressive", "stage": "preflop", "theoretical": "Raise", "total_hands": 5, "total_net": 26256, "wins": 3, "losses": 2, "actions": {"Raise": {"count": 5, "total_net": 26256, "avg_net": 5251}}, "data_driven_best": "Raise", "data_driven_best_avg": 5251}, "MP|Good|3 Aggressive|flop": {"position": "MP", "category": "Good", "opponents": "3 Aggressive", "stage": "flop", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "MP|Good|3 Aggressive|turn": {"position": "MP", "category": "Good", "opponents": "3 Aggressive", "stage": "turn", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "MP|Good|3 Aggressive|river": {"position": "MP", "category": "Good", "opponents": "3 Aggressive", "stage": "river", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "MP|Good|1 Weak + 2 Agg|preflop": {"position": "MP", "category": "Good", "opponents": "1 Weak + 2 Agg", "stage": "preflop", "theoretical": "Raise", "total_hands": 16, "total_net": 1113601, "wins": 10, "losses": 5, "actions": {"All-In": {"count": 6, "total_net": 995264, "avg_net": 165877}, "Fold": {"count": 1, "total_net": -150, "avg_net": -150}, "Call": {"count": 5, "total_net": 44397, "avg_net": 8879}, "Raise": {"count": 4, "total_net": 74090, "avg_net": 18522}}, "data_driven_best": "All-In", "data_driven_best_avg": 165877}, "MP|Good|1 Weak + 2 Agg|flop": {"position": "MP", "category": "Good", "opponents": "1 Weak + 2 Agg", "stage": "flop", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "MP|Good|1 Weak + 2 Agg|turn": {"position": "MP", "category": "Good", "opponents": "1 Weak + 2 Agg", "stage": "turn", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "MP|Good|1 Weak + 2 Agg|river": {"position": "MP", "category": "Good", "opponents": "1 Weak + 2 Agg", "stage": "river", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "MP|Good|2 Weak + 1 Agg|preflop": {"position": "MP", "category": "Good", "opponents": "2 Weak + 1 Agg", "stage": "preflop", "theoretical": "Raise", "total_hands": 17, "total_net": 121117, "wins": 10, "losses": 4, "actions": {"All-In": {"count": 2, "total_net": 10940, "avg_net": 5470}, "Raise": {"count": 13, "total_net": 112017, "avg_net": 8617}, "Call": {"count": 1, "total_net": -40, "avg_net": -40}, "Fold": {"count": 1, "total_net": -1800, "avg_net": -1800}}, "data_driven_best": "Raise", "data_driven_best_avg": 8617}, "MP|Good|2 Weak + 1 Agg|flop": {"position": "MP", "category": "Good", "opponents": "2 Weak + 1 Agg", "stage": "flop", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "MP|Good|2 Weak + 1 Agg|turn": {"position": "MP", "category": "Good", "opponents": "2 Weak + 1 Agg", "stage": "turn", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "MP|Good|2 Weak + 1 Agg|river": {"position": "MP", "category": "Good", "opponents": "2 Weak + 1 Agg", "stage": "river", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "MP|Good|3 Weak|preflop": {"position": "MP", "category": "Good", "opponents": "3 Weak", "stage": "preflop", "theoretical": "Raise", "total_hands": 8, "total_net": -5380, "wins": 3, "losses": 2, "actions": {"Call": {"count": 7, "total_net": -4840, "avg_net": -691}, "Fold": {"count": 1, "total_net": -540, "avg_net": -540}}, "data_driven_best": "Call", "data_driven_best_avg": -691}, "MP|Good|3 Weak|flop": {"position": "MP", "category": "Good", "opponents": "3 Weak", "stage": "flop", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "MP|Good|3 Weak|turn": {"position": "MP", "category": "Good", "opponents": "3 Weak", "stage": "turn", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "MP|Good|3 Weak|river": {"position": "MP", "category": "Good", "opponents": "3 Weak", "stage": "river", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "MP|Medium|3 Aggressive|preflop": {"position": "MP", "category": "Medium", "opponents": "3 Aggressive", "stage": "preflop", "theoretical": "Fold", "total_hands": 10, "total_net": 8445, "wins": 1, "losses": 1, "actions": {"Fold": {"count": 3, "total_net": -158, "avg_net": -53}, "Call": {"count": 5, "total_net": 10410, "avg_net": 2082}, "Raise": {"count": 2, "total_net": -1807, "avg_net": -904}}, "data_driven_best": "Call", "data_driven_best_avg": 2082}, "MP|Medium|1 Weak + 2 Agg|preflop": {"position": "MP", "category": "Medium", "opponents": "1 Weak + 2 Agg", "stage": "preflop", "theoretical": "Fold", "total_hands": 26, "total_net": 40059, "wins": 5, "losses": 6, "actions": {"Call": {"count": 10, "total_net": 29833, "avg_net": 2983}, "All-In": {"count": 2, "total_net": -5280, "avg_net": -2640}, "Fold": {"count": 8, "total_net": -1663, "avg_net": -208}, "Raise": {"count": 6, "total_net": 17169, "avg_net": 2862}}, "data_driven_best": "Call", "data_driven_best_avg": 2983}, "MP|Medium|2 Weak + 1 Agg|preflop": {"position": "MP", "category": "Medium", "opponents": "2 Weak + 1 Agg", "stage": "preflop", "theoretical": "Call", "total_hands": 94, "total_net": 2380429, "wins": 35, "losses": 10, "actions": {"Call": {"count": 41, "total_net": 1990024, "avg_net": 48537}, "Raise": {"count": 33, "total_net": 304700, "avg_net": 9233}, "Fold": {"count": 18, "total_net": -11615, "avg_net": -645}, "All-In": {"count": 2, "total_net": 97320, "avg_net": 48660}}, "data_driven_best": "Call", "data_driven_best_avg": 48537}, "MP|Medium|2 Weak + 1 Agg|flop": {"position": "MP", "category": "Medium", "opponents": "2 Weak + 1 Agg", "stage": "flop", "theoretical": "Check-Fold", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "MP|Medium|3 Weak|preflop": {"position": "MP", "category": "Medium", "opponents": "3 Weak", "stage": "preflop", "theoretical": "Call", "total_hands": 58, "total_net": 540062, "wins": 16, "losses": 8, "actions": {"Call": {"count": 52, "total_net": 541001, "avg_net": 10404}, "Fold": {"count": 6, "total_net": -939, "avg_net": -156}}, "data_driven_best": "Call", "data_driven_best_avg": 10404}, "MP|Medium|3 Weak|flop": {"position": "MP", "category": "Medium", "opponents": "3 Weak", "stage": "flop", "theoretical": "Check-Fold", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "MP|Junk|3 Aggressive|preflop": {"position": "MP", "category": "Junk", "opponents": "3 Aggressive", "stage": "preflop", "theoretical": "Fold", "total_hands": 18, "total_net": -190422, "wins": 1, "losses": 2, "actions": {"Fold": {"count": 14, "total_net": -195236, "avg_net": -13945}, "Call": {"count": 3, "total_net": -95, "avg_net": -32}, "Raise": {"count": 1, "total_net": 4909, "avg_net": 4909}}, "data_driven_best": "Call", "data_driven_best_avg": -32}, "MP|Junk|1 Weak + 2 Agg|preflop": {"position": "MP", "category": "Junk", "opponents": "1 Weak + 2 Agg", "stage": "preflop", "theoretical": "Fold", "total_hands": 117, "total_net": -206185, "wins": 8, "losses": 9, "actions": {"Call": {"count": 14, "total_net": -18602, "avg_net": -1329}, "Fold": {"count": 83, "total_net": -152388, "avg_net": -1836}, "All-In": {"count": 4, "total_net": 27665, "avg_net": 6916}, "Raise": {"count": 16, "total_net": -62860, "avg_net": -3929}}, "data_driven_best": "All-In", "data_driven_best_avg": 6916}, "MP|Junk|2 Weak + 1 Agg|preflop": {"position": "MP", "category": "Junk", "opponents": "2 Weak + 1 Agg", "stage": "preflop", "theoretical": "Fold", "total_hands": 556, "total_net": 789318, "wins": 67, "losses": 23, "actions": {"Fold": {"count": 396, "total_net": -474077, "avg_net": -1197}, "Call": {"count": 99, "total_net": 538238, "avg_net": 5437}, "Raise": {"count": 54, "total_net": -95959, "avg_net": -1777}, "All-In": {"count": 7, "total_net": 821116, "avg_net": 117302}}, "data_driven_best": "All-In", "data_driven_best_avg": 117302}, "MP|Junk|3 Weak|preflop": {"position": "MP", "category": "Junk", "opponents": "3 Weak", "stage": "preflop", "theoretical": "Fold", "total_hands": 342, "total_net": 166769, "wins": 54, "losses": 9, "actions": {"Call": {"count": 125, "total_net": 371966, "avg_net": 2976}, "Fold": {"count": 213, "total_net": -198507, "avg_net": -932}, "Check": {"count": 4, "total_net": -6690, "avg_net": -1672}}, "data_driven_best": "Call", "data_driven_best_avg": 2976}, "LP|Good|3 Aggressive|preflop": {"position": "LP", "category": "Good", "opponents": "3 Aggressive", "stage": "preflop", "theoretical": "Raise", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Good|3 Aggressive|flop": {"position": "LP", "category": "Good", "opponents": "3 Aggressive", "stage": "flop", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Good|3 Aggressive|turn": {"position": "LP", "category": "Good", "opponents": "3 Aggressive", "stage": "turn", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Good|3 Aggressive|river": {"position": "LP", "category": "Good", "opponents": "3 Aggressive", "stage": "river", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Good|1 Weak + 2 Agg|preflop": {"position": "LP", "category": "Good", "opponents": "1 Weak + 2 Agg", "stage": "preflop", "theoretical": "Raise", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Good|1 Weak + 2 Agg|flop": {"position": "LP", "category": "Good", "opponents": "1 Weak + 2 Agg", "stage": "flop", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Good|1 Weak + 2 Agg|turn": {"position": "LP", "category": "Good", "opponents": "1 Weak + 2 Agg", "stage": "turn", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Good|1 Weak + 2 Agg|river": {"position": "LP", "category": "Good", "opponents": "1 Weak + 2 Agg", "stage": "river", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Good|2 Weak + 1 Agg|preflop": {"position": "LP", "category": "Good", "opponents": "2 Weak + 1 Agg", "stage": "preflop", "theoretical": "Raise", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Good|2 Weak + 1 Agg|flop": {"position": "LP", "category": "Good", "opponents": "2 Weak + 1 Agg", "stage": "flop", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Good|2 Weak + 1 Agg|turn": {"position": "LP", "category": "Good", "opponents": "2 Weak + 1 Agg", "stage": "turn", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Good|2 Weak + 1 Agg|river": {"position": "LP", "category": "Good", "opponents": "2 Weak + 1 Agg", "stage": "river", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Good|3 Weak|preflop": {"position": "LP", "category": "Good", "opponents": "3 Weak", "stage": "preflop", "theoretical": "Raise", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Good|3 Weak|flop": {"position": "LP", "category": "Good", "opponents": "3 Weak", "stage": "flop", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Good|3 Weak|turn": {"position": "LP", "category": "Good", "opponents": "3 Weak", "stage": "turn", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Good|3 Weak|river": {"position": "LP", "category": "Good", "opponents": "3 Weak", "stage": "river", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Medium|3 Aggressive|preflop": {"position": "LP", "category": "Medium", "opponents": "3 Aggressive", "stage": "preflop", "theoretical": "Raise", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Medium|3 Aggressive|flop": {"position": "LP", "category": "Medium", "opponents": "3 Aggressive", "stage": "flop", "theoretical": "Check", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Medium|3 Aggressive|turn": {"position": "LP", "category": "Medium", "opponents": "3 Aggressive", "stage": "turn", "theoretical": "Check-Fold", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Medium|1 Weak + 2 Agg|preflop": {"position": "LP", "category": "Medium", "opponents": "1 Weak + 2 Agg", "stage": "preflop", "theoretical": "Raise", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Medium|1 Weak + 2 Agg|flop": {"position": "LP", "category": "Medium", "opponents": "1 Weak + 2 Agg", "stage": "flop", "theoretical": "Check", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Medium|1 Weak + 2 Agg|turn": {"position": "LP", "category": "Medium", "opponents": "1 Weak + 2 Agg", "stage": "turn", "theoretical": "Check-Fold", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Medium|2 Weak + 1 Agg|preflop": {"position": "LP", "category": "Medium", "opponents": "2 Weak + 1 Agg", "stage": "preflop", "theoretical": "Raise", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Medium|2 Weak + 1 Agg|flop": {"position": "LP", "category": "Medium", "opponents": "2 Weak + 1 Agg", "stage": "flop", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Medium|2 Weak + 1 Agg|turn": {"position": "LP", "category": "Medium", "opponents": "2 Weak + 1 Agg", "stage": "turn", "theoretical": "Check", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Medium|2 Weak + 1 Agg|river": {"position": "LP", "category": "Medium", "opponents": "2 Weak + 1 Agg", "stage": "river", "theoretical": "Check-Fold", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Medium|3 Weak|preflop": {"position": "LP", "category": "Medium", "opponents": "3 Weak", "stage": "preflop", "theoretical": "Raise", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Medium|3 Weak|flop": {"position": "LP", "category": "Medium", "opponents": "3 Weak", "stage": "flop", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Medium|3 Weak|turn": {"position": "LP", "category": "Medium", "opponents": "3 Weak", "stage": "turn", "theoretical": "Check", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Medium|3 Weak|river": {"position": "LP", "category": "Medium", "opponents": "3 Weak", "stage": "river", "theoretical": "Check-Fold", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Junk|3 Aggressive|preflop": {"position": "LP", "category": "Junk", "opponents": "3 Aggressive", "stage": "preflop", "theoretical": "Fold", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Junk|1 Weak + 2 Agg|preflop": {"position": "LP", "category": "Junk", "opponents": "1 Weak + 2 Agg", "stage": "preflop", "theoretical": "Fold", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Junk|2 Weak + 1 Agg|preflop": {"position": "LP", "category": "Junk", "opponents": "2 Weak + 1 Agg", "stage": "preflop", "theoretical": "Fold", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "LP|Junk|3 Weak|preflop": {"position": "LP", "category": "Junk", "opponents": "3 Weak", "stage": "preflop", "theoretical": "Fold", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "Blinds|Good|3 Aggressive|preflop": {"position": "Blinds", "category": "Good", "opponents": "3 Aggressive", "stage": "preflop", "theoretical": "3-Bet", "total_hands": 11, "total_net": 815694, "wins": 8, "losses": 2, "actions": {"Raise": {"count": 5, "total_net": 691458, "avg_net": 138292}, "All-In": {"count": 6, "total_net": 124236, "avg_net": 20706}}, "data_driven_best": "Raise", "data_driven_best_avg": 138292}, "Blinds|Good|3 Aggressive|flop": {"position": "Blinds", "category": "Good", "opponents": "3 Aggressive", "stage": "flop", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "Blinds|Good|3 Aggressive|turn": {"position": "Blinds", "category": "Good", "opponents": "3 Aggressive", "stage": "turn", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "Blinds|Good|3 Aggressive|river": {"position": "Blinds", "category": "Good", "opponents": "3 Aggressive", "stage": "river", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "Blinds|Good|1 Weak + 2 Agg|preflop": {"position": "Blinds", "category": "Good", "opponents": "1 Weak + 2 Agg", "stage": "preflop", "theoretical": "3-Bet", "total_hands": 36, "total_net": 2172229, "wins": 22, "losses": 10, "actions": {"All-In": {"count": 16, "total_net": 381754, "avg_net": 23860}, "Raise": {"count": 15, "total_net": 1439118, "avg_net": 95941}, "Call": {"count": 5, "total_net": 351357, "avg_net": 70271}}, "data_driven_best": "Raise", "data_driven_best_avg": 95941}, "Blinds|Good|1 Weak + 2 Agg|flop": {"position": "Blinds", "category": "Good", "opponents": "1 Weak + 2 Agg", "stage": "flop", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "Blinds|Good|1 Weak + 2 Agg|turn": {"position": "Blinds", "category": "Good", "opponents": "1 Weak + 2 Agg", "stage": "turn", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "Blinds|Good|1 Weak + 2 Agg|river": {"position": "Blinds", "category": "Good", "opponents": "1 Weak + 2 Agg", "stage": "river", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "Blinds|Good|2 Weak + 1 Agg|preflop": {"position": "Blinds", "category": "Good", "opponents": "2 Weak + 1 Agg", "stage": "preflop", "theoretical": "3-Bet", "total_hands": 38, "total_net": 173205, "wins": 22, "losses": 7, "actions": {"Raise": {"count": 26, "total_net": -176866, "avg_net": -6803}, "Call": {"count": 9, "total_net": 348000, "avg_net": 38667}, "All-In": {"count": 3, "total_net": 2071, "avg_net": 690}}, "data_driven_best": "Call", "data_driven_best_avg": 38667}, "Blinds|Good|2 Weak + 1 Agg|flop": {"position": "Blinds", "category": "Good", "opponents": "2 Weak + 1 Agg", "stage": "flop", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "Blinds|Good|2 Weak + 1 Agg|turn": {"position": "Blinds", "category": "Good", "opponents": "2 Weak + 1 Agg", "stage": "turn", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "Blinds|Good|2 Weak + 1 Agg|river": {"position": "Blinds", "category": "Good", "opponents": "2 Weak + 1 Agg", "stage": "river", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "Blinds|Good|3 Weak|preflop": {"position": "Blinds", "category": "Good", "opponents": "3 Weak", "stage": "preflop", "theoretical": "3-Bet", "total_hands": 8, "total_net": 17809, "wins": 2, "losses": 0, "actions": {"Call": {"count": 5, "total_net": 19190, "avg_net": 3838}, "Check": {"count": 3, "total_net": -1381, "avg_net": -460}}, "data_driven_best": "Call", "data_driven_best_avg": 3838}, "Blinds|Good|3 Weak|flop": {"position": "Blinds", "category": "Good", "opponents": "3 Weak", "stage": "flop", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "Blinds|Good|3 Weak|turn": {"position": "Blinds", "category": "Good", "opponents": "3 Weak", "stage": "turn", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "Blinds|Good|3 Weak|river": {"position": "Blinds", "category": "Good", "opponents": "3 Weak", "stage": "river", "theoretical": "Bet", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "Blinds|Medium|3 Aggressive|preflop": {"position": "Blinds", "category": "Medium", "opponents": "3 Aggressive", "stage": "preflop", "theoretical": "Fold", "total_hands": 7, "total_net": 375582, "wins": 2, "losses": 3, "actions": {"Fold": {"count": 2, "total_net": -1670, "avg_net": -835}, "Raise": {"count": 1, "total_net": 33444, "avg_net": 33444}, "All-In": {"count": 3, "total_net": 344050, "avg_net": 114683}, "Call": {"count": 1, "total_net": -242, "avg_net": -242}}, "data_driven_best": "All-In", "data_driven_best_avg": 114683}, "Blinds|Medium|1 Weak + 2 Agg|preflop": {"position": "Blinds", "category": "Medium", "opponents": "1 Weak + 2 Agg", "stage": "preflop", "theoretical": "Fold", "total_hands": 52, "total_net": 12091251, "wins": 9, "losses": 18, "actions": {"Call": {"count": 16, "total_net": -201888, "avg_net": -12618}, "All-In": {"count": 12, "total_net": 12541549, "avg_net": 1045129}, "Raise": {"count": 12, "total_net": -47485, "avg_net": -3957}, "Fold": {"count": 12, "total_net": -200925, "avg_net": -16744}}, "data_driven_best": "All-In", "data_driven_best_avg": 1045129}, "Blinds|Medium|2 Weak + 1 Agg|preflop": {"position": "Blinds", "category": "Medium", "opponents": "2 Weak + 1 Agg", "stage": "preflop", "theoretical": "Call", "total_hands": 188, "total_net": -395937, "wins": 71, "losses": 12, "actions": {"Call": {"count": 111, "total_net": -249895, "avg_net": -2251}, "Raise": {"count": 39, "total_net": -78282, "avg_net": -2007}, "Fold": {"count": 33, "total_net": -174570, "avg_net": -5290}, "All-In": {"count": 5, "total_net": 106810, "avg_net": 21362}}, "data_driven_best": "All-In", "data_driven_best_avg": 21362}, "Blinds|Medium|2 Weak + 1 Agg|flop": {"position": "Blinds", "category": "Medium", "opponents": "2 Weak + 1 Agg", "stage": "flop", "theoretical": "Check-Fold", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "Blinds|Medium|3 Weak|preflop": {"position": "Blinds", "category": "Medium", "opponents": "3 Weak", "stage": "preflop", "theoretical": "Call", "total_hands": 78, "total_net": 287083, "wins": 30, "losses": 9, "actions": {"Call": {"count": 62, "total_net": 393154, "avg_net": 6341}, "Check": {"count": 13, "total_net": -66126, "avg_net": -5087}, "Fold": {"count": 3, "total_net": -39945, "avg_net": -13315}}, "data_driven_best": "Call", "data_driven_best_avg": 6341}, "Blinds|Medium|3 Weak|flop": {"position": "Blinds", "category": "Medium", "opponents": "3 Weak", "stage": "flop", "theoretical": "Check-Fold", "total_hands": 0, "total_net": 0, "wins": 0, "losses": 0, "actions": {}, "data_driven_best": null, "data_driven_best_avg": null}, "Blinds|Junk|3 Aggressive|preflop": {"position": "Blinds", "category": "Junk", "opponents": "3 Aggressive", "stage": "preflop", "theoretical": "Fold", "total_hands": 27, "total_net": 141306, "wins": 7, "losses": 2, "actions": {"Raise": {"count": 6, "total_net": 81578, "avg_net": 13596}, "Fold": {"count": 14, "total_net": -23627, "avg_net": -1688}, "Call": {"count": 7, "total_net": 83355, "avg_net": 11908}}, "data_driven_best": "Raise", "data_driven_best_avg": 13596}, "Blinds|Junk|1 Weak + 2 Agg|preflop": {"position": "Blinds", "category": "Junk", "opponents": "1 Weak + 2 Agg", "stage": "preflop", "theoretical": "Fold", "total_hands": 238, "total_net": -147165, "wins": 26, "losses": 18, "actions": {"Raise": {"count": 21, "total_net": 625218, "avg_net": 29772}, "Fold": {"count": 169, "total_net": -1163693, "avg_net": -6886}, "Call": {"count": 31, "total_net": 214860, "avg_net": 6931}, "All-In": {"count": 17, "total_net": 176450, "avg_net": 10379}}, "data_driven_best": "Raise", "data_driven_best_avg": 29772}, "Blinds|Junk|2 Weak + 1 Agg|preflop": {"position": "Blinds", "category": "Junk", "opponents": "2 Weak + 1 Agg", "stage": "preflop", "theoretical": "Fold", "total_hands": 1195, "total_net": -3487860, "wins": 156, "losses": 62, "actions": {"Raise": {"count": 77, "total_net": 194182, "avg_net": 2522}, "Call": {"count": 372, "total_net": -193711, "avg_net": -521}, "Fold": {"count": 734, "total_net": -3800172, "avg_net": -5177}, "All-In": {"count": 12, "total_net": 311841, "avg_net": 25987}}, "data_driven_best": "All-In", "data_driven_best_avg": 25987}, "Blinds|Junk|3 Weak|preflop": {"position": "Blinds", "category": "Junk", "opponents": "3 Weak", "stage": "preflop", "theoretical": "Fold", "total_hands": 636, "total_net": -3620686, "wins": 125, "losses": 54, "actions": {"Call": {"count": 253, "total_net": -1989029, "avg_net": -7862}, "Check": {"count": 184, "total_net": -296334, "avg_net": -1611}, "Fold": {"count": 199, "total_net": -1335323, "avg_net": -6710}}, "data_driven_best": "Check", "data_driven_best_avg": -1611}}};
+
+const selections = { position: null, category: null, opponents: null, stage: null };
+
+function select(group, value) {
+  selections[group] = value;
+  
+  // Update button styles
+  document.querySelectorAll(`#${group}-btns .btn-selector`).forEach(b => {
+    b.classList.remove('active', 'bg-emerald-900/30', 'border-emerald-500/50', 'text-emerald-200');
+    if (b.dataset.val === value) {
+      b.classList.add('active', 'bg-emerald-900/30', 'border-emerald-500/50', 'text-emerald-200');
+    }
+  });
+  
+  // Show results when all 4 selected
+  if (selections.position && selections.category && selections.opponents && selections.stage) {
+    updateResults();
+  }
+}
+
+function fmt(n) {
+  if (n === null || n === undefined) return '—';
+  const sign = n >= 0 ? '+' : '';
+  return sign + n.toLocaleString();
+}
+
+function fmtAction(a) {
+  const colors = {'Fold':'text-amber-300','Call':'text-blue-300','Raise':'text-purple-300','Bet':'text-emerald-300','All-In':'text-red-300','Check':'text-gray-300','3-Bet':'text-purple-300'};
+  return `<span class="${colors[a]||'text-gray-300'} font-medium">${a}</span>`;
+}
+
+function getConfidence(hands) {
+  if (hands >= 50) return ['🟢', 'High confidence', 'text-emerald-400'];
+  if (hands >= 20) return ['🟡', 'Medium confidence', 'text-yellow-400'];
+  if (hands >= 5) return ['🟠', 'Low confidence', 'text-orange-400'];
+  return ['⚪', 'Insufficient data', 'text-gray-400'];
+}
+
+function updateResults() {
+  const key = `${selections.position}|${selections.category}|${selections.opponents}|${selections.stage}`;
+  const data = FLOW_DATA.flows[key] || null;
+  
+  document.getElementById('results').classList.remove('hidden');
+  
+  if (!data) {
+    // Flow not in data at all
+    document.getElementById('theory-card').querySelector('.text-emerald-300').textContent = 'N/A';
+    document.getElementById('theory-desc').textContent = 'No matrix recommendation for this combination';
+    document.getElementById('data-best-action').textContent = '—';
+    document.getElementById('data-avg-net').textContent = '';
+    document.getElementById('data-confidence').textContent = '';
+    document.getElementById('agreement-badge').innerHTML = '';
+    document.getElementById('insufficient-msg').classList.remove('hidden');
+    document.getElementById('action-table').innerHTML = '';
+    document.getElementById('bn-hands').textContent = '0';
+    document.getElementById('bn-net').textContent = '0';
+    document.getElementById('bn-wins').textContent = '0/0';
+    return;
+  }
+  
+  // Theory card
+  document.getElementById('theory-action').textContent = data.theoretical || 'N/A';
+  document.getElementById('theory-desc').textContent = data.theoretical ? 'Standard 4-handed recommendation for this spot' : '';
+  
+  // Data card
+  const actions = data.actions || {};
+  const actionKeys = Object.keys(actions).sort((a,b) => actions[b].avg_net - actions[a].avg_net);
+  const hasData = data.total_hands > 0 && actionKeys.length > 0;
+  
+  if (hasData && data.data_driven_best && data.data_driven_best !== null) {
+    const best = data.data_driven_best;
+    const bestData = actions[best];
+    document.getElementById('data-best-action').textContent = best;
+    
+    const netEl = document.getElementById('data-avg-net');
+    const avgNet = bestData.avg_net;
+    netEl.textContent = fmt(avgNet) + ' / hand';
+    netEl.className = 'text-lg font-semibold ' + (avgNet >= 0 ? 'chip-positive' : 'chip-negative');
+    
+    const [emoji, label, color] = getConfidence(bestData.count);
+    document.getElementById('data-confidence').innerHTML = `<span class="${color}">${emoji} ${label}</span> — based on <strong>${bestData.count}</strong> hand${bestData.count !== 1 ? 's' : ''}`;
+    
+    // Agreement badge
+    const badge = document.getElementById('agreement-badge');
+    if (data.theoretical === best) {
+      badge.innerHTML = '<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-emerald-400/10 text-emerald-300 border border-emerald-400/20">✅ Data confirms this strategy</div>';
+    } else {
+      badge.innerHTML = '<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-amber-400/10 text-amber-300 border border-amber-400/20">⚠️ Your data suggests a different approach</div>';
+    }
+    
+    document.getElementById('insufficient-msg').classList.add('hidden');
+    
+    // Action comparison table
+    let tableHtml = '';
+    actionKeys.forEach(a => {
+      const d = actions[a];
+      const cls = d.avg_net >= 0 ? 'bg-emerald-400/5 border-emerald-400/10' : 'bg-red-400/5 border-red-400/10';
+      tableHtml += `<div class="flex items-center justify-between px-3 py-2 rounded-lg border ${cls}">
+        <div>${fmtAction(a)}</div>
+        <div class="flex items-center gap-4 text-sm">
+          <span class="text-gray-400">${d.count} hands</span>
+          <span class="font-mono font-medium ${d.avg_net >= 0 ? 'chip-positive' : 'chip-negative'}">${fmt(d.avg_net)}</span>
+        </div>
+      </div>`;
+    });
+    document.getElementById('action-table').innerHTML = tableHtml;
+    
+  } else {
+    document.getElementById('data-best-action').textContent = '—';
+    document.getElementById('data-avg-net').textContent = '';
+    document.getElementById('data-confidence').textContent = '';
+    document.getElementById('agreement-badge').innerHTML = '';
+    document.getElementById('insufficient-msg').classList.remove('hidden');
+    
+    if (actionKeys.length > 0) {
+      let tableHtml = '';
+      actionKeys.forEach(a => {
+        const d = actions[a];
+        const cls = d.avg_net >= 0 ? 'bg-emerald-400/5 border-emerald-400/10' : 'bg-red-400/5 border-red-400/10';
+        tableHtml += `<div class="flex items-center justify-between px-3 py-2 rounded-lg border ${cls}">
+          <div>${fmtAction(a)}</div>
+          <div class="flex items-center gap-4 text-sm">
+            <span class="text-gray-400">${d.count} hands</span>
+            <span class="font-mono font-medium ${d.avg_net >= 0 ? 'chip-positive' : 'chip-negative'}">${fmt(d.avg_net)}</span>
+          </div>
+        </div>`;
+      });
+      document.getElementById('action-table').innerHTML = tableHtml;
+    } else {
+      document.getElementById('action-table').innerHTML = '<div class="text-sm text-gray-500 text-center py-4">No recorded hands for this flow</div>';
+    }
+  }
+  
+  // By the numbers
+  document.getElementById('bn-hands').textContent = data.total_hands || 0;
+  const netEl2 = document.getElementById('bn-net');
+  if (data.total_net !== undefined && data.total_net !== null) {
+    netEl2.textContent = fmt(data.total_net);
+    netEl2.className = 'text-lg font-bold ' + (data.total_net >= 0 ? 'chip-positive' : 'chip-negative');
+  } else {
+    netEl2.textContent = '—';
+    netEl2.className = 'text-lg font-bold text-gray-400';
+  }
+  const w = data.wins || 0;
+  const l = data.losses || 0;
+  document.getElementById('bn-wins').textContent = `${w}W / ${l}L`;
+}
+</script>
+</body>
+</html>
