@@ -148,9 +148,6 @@
           }).join('');
         }
 
-        function toggleTip(el) {
-          el.classList.toggle('expanded');
-        }
       } catch (e) {
         // Silently keep placeholder content on error
         console.warn('Could not load dynamic tips:', e);
@@ -161,6 +158,10 @@
       const div = document.createElement('div');
       div.textContent = text;
       return div.innerHTML;
+    }
+
+    function toggleTip(el) {
+      el.classList.toggle('expanded');
     }
   </script>
 
