@@ -119,19 +119,37 @@
           <div class="tip-content">${contentHtml}</div>
         `;
 
-        // Render past tips
+        // Render past tips — expandable on click
         const pastCard = document.getElementById('past-tips-card');
         if (past.length > 0) {
-          pastCard.innerHTML = past.map(tip => {
+          pastCard.innerHTML = past.map((tip, idx) => {
             const d = new Date(tip.date + 'T00:00:00');
             const ds = d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+            const contentHtml = tip.content
+              .split('\n')
+              .map(p => p.trim())
+              .filter(p => p.length > 0)
+              .map(p => `<p>${escapeHtml(p)}</p>`)
+              .join('');
             return `
-              <div class="tip-list-item">
-                <div class="tip-list-date">${escapeHtml(ds)}</div>
-                <div class="tip-list-title">${escapeHtml(tip.title)}</div>
+              <div class="tip-list-item" data-index="${idx}">
+                <div class="tip-list-header" onclick="toggleTip(this.parentElement)">
+                  <div>
+                    <div class="tip-list-date">${escapeHtml(ds)}</div>
+                    <div class="tip-list-title">${escapeHtml(tip.title)}</div>
+                  </div>
+                  <div class="tip-expand-toggle">▼</div>
+                </div>
+                <div class="tip-expanded-content">
+                  <div class="tip-content">${contentHtml}</div>
+                </div>
               </div>
             `;
           }).join('');
+        }
+
+        function toggleTip(el) {
+          el.classList.toggle('expanded');
         }
       } catch (e) {
         // Silently keep placeholder content on error

@@ -237,6 +237,58 @@ hr.gold {
   margin-bottom: 0;
 }
 
+/* Expandable past tips */
+.tip-list-item {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0 -1rem;
+}
+
+.tip-list-item:hover {
+  background-color: var(--surface-hover);
+}
+
+.tip-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.tip-expand-toggle {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  color: var(--gold-dim);
+  transition: transform 0.3s ease;
+  margin-top: 0.25rem;
+}
+
+.tip-list-item.expanded .tip-expand-toggle {
+  transform: rotate(180deg);
+}
+
+.tip-expanded-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s ease;
+  opacity: 0;
+  margin-top: 0;
+}
+
+.tip-list-item.expanded .tip-expanded-content {
+  max-height: 2000px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+.tip-expanded-content .tip-content {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  font-size: 0.95rem;
+}
+
 /* Past tips list */
 .tip-list-item {
   padding: 1rem 0;
