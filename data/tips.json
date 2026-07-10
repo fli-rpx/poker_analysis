@@ -365,6 +365,12 @@
       "title": "The Float Play — Stealing Pots You Have No Right to Win",
       "content": "The Float Play is calling a flop bet with a weak hand intending to take the pot away on a later street. It's a leopard strike from the tall grass — you look weak by calling, then attack when the timing is right.\n\nWhen to float: (1) Your opponent c-bets frequently (70%+), (2) The flop is dry and disconnected — less likely to hit their range, (3) You have position. Ideal float hands have backdoor draws — gutshot, backdoor flush — giving you equity to continue if they check the turn.\n\nExample: TAG opens to 3BB from MP. You call on the button with T♠9♠. Flop Q♣7♠2♦ — complete miss. They c-bet 4BB into 7.5BB. You float-call. Your logic: their range is AK, AQ, KQ, JJ+. They c-bet all of it. Turn is 4♣ — blank. They check 70% of the time without Qx. You bet 7BB into 15.5BB. They fold AKo, JJ, TT — all hands that beat you preflop but missed this board.\n\nUse the float 1-2 times per session. A precision weapon. Choose spots against c-bet-happy but turn-weak opponents. The leopard doesn't float every pot — it waits for the exact moment the prey's attention drifts.",
       "category": "postflop"
+    },
+    {
+      "date": "2026-07-10",
+      "title": "The 15-Big-Blind Threshold — Why Flat Calling Is a Mistake Under 15 Big Blinds",
+      "content": "Today's focus: The 15-Big-Blind Threshold — Why Flat Calling Is a Mistake Under 15 Big Blinds. This falls under the tournament-specific category. Review the principle of First God > Second Odds > Last Cards before your session. Attack like a leopard — unexpected, careful, watchful.",
+      "category": "tournament-specific"
     }
   ]
 }
