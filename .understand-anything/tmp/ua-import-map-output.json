@@ -1,0 +1,19 @@
+{
+  "scriptCompleted": true,
+  "stats": {
+    "filesScanned": 9,
+    "filesWithImports": 0,
+    "totalEdges": 0
+  },
+  "importMap": {
+    "analysis.html": [],
+    "archive.html": [],
+    "data/analysis_history.json": [],
+    "data/tips.json": [],
+    "index.html": [],
+    "philosophy.html": [],
+    "REQUIREMENTS.md": [],
+    "scripts/refresh_daily.py": [],
+    "style.css": []
+  }
+}

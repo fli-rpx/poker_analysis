@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 9,
+  "totalBatches": 2,
+  "exportsByPath": {
+    "scripts/refresh_daily.py": [
+      "load_json",
+      "save_json",
+      "run_command",
+      "parse_tip_history",
+      "generate_tip_content",
+      "parse_review_output",
+      "configure_git_auth",
+      "git_commit_and_push",
+      "main"
+    ]
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": "REQUIREMENTS.md",
+          "language": "markdown",
+          "sizeLines": 139,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "analysis.html",
+          "language": "html",
+          "sizeLines": 192,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "archive.html",
+          "language": "html",
+          "sizeLines": 232,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "index.html",
+          "language": "html",
+          "sizeLines": 150,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "philosophy.html",
+          "language": "html",
+          "sizeLines": 217,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "style.css",
+          "language": "css",
+          "sizeLines": 600,
+          "fileCategory": "markup"
+        }
+      ],
+      "batchImportData": {
+        "REQUIREMENTS.md": [],
+        "analysis.html": [],
+        "archive.html": [],
+        "index.html": [],
+        "philosophy.html": [],
+        "style.css": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 2,
+      "files": [
+        {
+          "path": "data/analysis_history.json",
+          "language": "json",
+          "sizeLines": 148,
+          "fileCategory": "config"
+        },
+        {
+          "path": "data/tips.json",
+          "language": "json",
+          "sizeLines": 268,
+          "fileCategory": "config"
+        },
+        {
+          "path": "scripts/refresh_daily.py",
+          "language": "python",
+          "sizeLines": 273,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "data/analysis_history.json": [],
+        "data/tips.json": [],
+        "scripts/refresh_daily.py": []
+      },
+      "neighborMap": {}
+    }
+  ]
+}

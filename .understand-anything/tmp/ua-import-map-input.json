@@ -1,0 +1,14 @@
+{
+  "projectRoot": "/Users/fudongli/Projects/poker_analysis",
+  "files": [
+    {"path": "analysis.html", "language": "html", "fileCategory": "markup"},
+    {"path": "archive.html", "language": "html", "fileCategory": "markup"},
+    {"path": "data/analysis_history.json", "language": "json", "fileCategory": "config"},
+    {"path": "data/tips.json", "language": "json", "fileCategory": "config"},
+    {"path": "index.html", "language": "html", "fileCategory": "markup"},
+    {"path": "philosophy.html", "language": "html", "fileCategory": "markup"},
+    {"path": "REQUIREMENTS.md", "language": "markdown", "fileCategory": "docs"},
+    {"path": "scripts/refresh_daily.py", "language": "python", "fileCategory": "code"},
+    {"path": "style.css", "language": "css", "fileCategory": "markup"}
+  ]
+}

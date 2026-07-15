@@ -1,0 +1,31 @@
+{
+  "name": "poker_analysis",
+  "description": "A static dark-themed website that serves as Frank's daily poker strategy hub. Aggregates daily poker tips, displays poker philosophy, and links to hand history analysis results.",
+  "languages": ["css", "html", "json", "markdown", "python"],
+  "frameworks": [],
+  "files": [
+    {"path": "analysis.html", "language": "html", "sizeLines": 192, "fileCategory": "markup"},
+    {"path": "archive.html", "language": "html", "sizeLines": 232, "fileCategory": "markup"},
+    {"path": "data/analysis_history.json", "language": "json", "sizeLines": 148, "fileCategory": "config"},
+    {"path": "data/tips.json", "language": "json", "sizeLines": 268, "fileCategory": "config"},
+    {"path": "index.html", "language": "html", "sizeLines": 150, "fileCategory": "markup"},
+    {"path": "philosophy.html", "language": "html", "sizeLines": 217, "fileCategory": "markup"},
+    {"path": "REQUIREMENTS.md", "language": "markdown", "sizeLines": 139, "fileCategory": "docs"},
+    {"path": "scripts/refresh_daily.py", "language": "python", "sizeLines": 273, "fileCategory": "code"},
+    {"path": "style.css", "language": "css", "sizeLines": 600, "fileCategory": "markup"}
+  ],
+  "totalFiles": 9,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "small",
+  "importMap": {
+    "analysis.html": [],
+    "archive.html": [],
+    "data/analysis_history.json": [],
+    "data/tips.json": [],
+    "index.html": [],
+    "philosophy.html": [],
+    "REQUIREMENTS.md": [],
+    "scripts/refresh_daily.py": [],
+    "style.css": []
+  }
+}

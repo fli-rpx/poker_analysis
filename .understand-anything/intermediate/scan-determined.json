@@ -1,0 +1,78 @@
+{
+  "scriptCompleted": true,
+  "files": [
+    {
+      "path": "analysis.html",
+      "language": "html",
+      "sizeLines": 192,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "archive.html",
+      "language": "html",
+      "sizeLines": 232,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "data/analysis_history.json",
+      "language": "json",
+      "sizeLines": 148,
+      "fileCategory": "config"
+    },
+    {
+      "path": "data/tips.json",
+      "language": "json",
+      "sizeLines": 268,
+      "fileCategory": "config"
+    },
+    {
+      "path": "index.html",
+      "language": "html",
+      "sizeLines": 150,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "philosophy.html",
+      "language": "html",
+      "sizeLines": 217,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "REQUIREMENTS.md",
+      "language": "markdown",
+      "sizeLines": 139,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "scripts/refresh_daily.py",
+      "language": "python",
+      "sizeLines": 273,
+      "fileCategory": "code"
+    },
+    {
+      "path": "style.css",
+      "language": "css",
+      "sizeLines": 600,
+      "fileCategory": "markup"
+    }
+  ],
+  "totalFiles": 9,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "small",
+  "stats": {
+    "filesScanned": 9,
+    "byCategory": {
+      "markup": 5,
+      "config": 2,
+      "docs": 1,
+      "code": 1
+    },
+    "byLanguage": {
+      "html": 4,
+      "json": 2,
+      "markdown": 1,
+      "python": 1,
+      "css": 1
+    }
+  }
+}

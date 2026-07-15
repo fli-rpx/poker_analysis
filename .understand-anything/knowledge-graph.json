@@ -1,0 +1,425 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "poker_analysis",
+    "languages": [
+      "css",
+      "html",
+      "json",
+      "markdown",
+      "python"
+    ],
+    "frameworks": [],
+    "description": "A static dark-themed website serving as Frank daily poker strategy hub. Aggregates daily poker tips, displays poker philosophy, and links to hand history analysis.",
+    "analyzedAt": "2026-06-23T00:17:00.000Z",
+    "gitCommitHash": "9cdcd970d79e698136377b6bbcc1f0e1146c612e"
+  },
+  "nodes": [
+    {
+      "id": "file:scripts/refresh_daily.py",
+      "type": "file",
+      "name": "refresh_daily.py",
+      "filePath": "scripts/refresh_daily.py",
+      "summary": "Daily poker tip refresh script. Reads tips.json, selects today tip, formats HTML. Triggered by Hermes cron (poker-companion).",
+      "tags": [
+        "python",
+        "cron",
+        "code"
+      ],
+      "complexity": "moderate",
+      "sizeLines": 273,
+      "language": "python",
+      "fileCategory": "code"
+    },
+    {
+      "id": "file:REQUIREMENTS.md",
+      "type": "file",
+      "name": "REQUIREMENTS.md",
+      "filePath": "REQUIREMENTS.md",
+      "summary": "Full project requirements document covering site structure, data sources, cron integration, and design system.",
+      "tags": [
+        "markdown",
+        "requirements",
+        "docs"
+      ],
+      "complexity": "moderate",
+      "sizeLines": 139,
+      "language": "markdown",
+      "fileCategory": "docs"
+    },
+    {
+      "id": "file:index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "index.html",
+      "summary": "Main landing page. Dark-themed poker strategy hub with links to analysis, archive, philosophy pages and daily tips display.",
+      "tags": [
+        "html",
+        "frontend",
+        "markup"
+      ],
+      "complexity": "moderate",
+      "sizeLines": 150,
+      "language": "html",
+      "fileCategory": "markup"
+    },
+    {
+      "id": "file:analysis.html",
+      "type": "file",
+      "name": "analysis.html",
+      "filePath": "analysis.html",
+      "summary": "Hand history analysis page with statistical breakdowns and charts for poker performance review.",
+      "tags": [
+        "html",
+        "frontend",
+        "markup"
+      ],
+      "complexity": "moderate",
+      "sizeLines": 192,
+      "language": "html",
+      "fileCategory": "markup"
+    },
+    {
+      "id": "file:archive.html",
+      "type": "file",
+      "name": "archive.html",
+      "filePath": "archive.html",
+      "summary": "Daily poker tips archive. Shows all historical tips with dates, paginated for browsing.",
+      "tags": [
+        "html",
+        "frontend",
+        "markup"
+      ],
+      "complexity": "moderate",
+      "sizeLines": 232,
+      "language": "html",
+      "fileCategory": "markup"
+    },
+    {
+      "id": "file:philosophy.html",
+      "type": "file",
+      "name": "philosophy.html",
+      "filePath": "philosophy.html",
+      "summary": "Poker philosophy and strategy principles page. Documents Frank approach to different game situations.",
+      "tags": [
+        "html",
+        "frontend",
+        "markup"
+      ],
+      "complexity": "moderate",
+      "sizeLines": 217,
+      "language": "html",
+      "fileCategory": "markup"
+    },
+    {
+      "id": "file:style.css",
+      "type": "file",
+      "name": "style.css",
+      "filePath": "style.css",
+      "summary": "Complete dark theme stylesheet (600 lines). Covers all pages with consistent color scheme, responsive layout, card components.",
+      "tags": [
+        "html",
+        "frontend",
+        "markup"
+      ],
+      "complexity": "complex",
+      "sizeLines": 600,
+      "language": "css",
+      "fileCategory": "markup"
+    },
+    {
+      "id": "file:data/tips.json",
+      "type": "file",
+      "name": "tips.json",
+      "filePath": "data/tips.json",
+      "summary": "Structured daily poker tips data. Contains tip text, date, category tags for each entry.",
+      "tags": [
+        "json",
+        "data",
+        "config"
+      ],
+      "complexity": "moderate",
+      "sizeLines": 268,
+      "language": "json",
+      "fileCategory": "config"
+    },
+    {
+      "id": "file:data/analysis_history.json",
+      "type": "file",
+      "name": "analysis_history.json",
+      "filePath": "data/analysis_history.json",
+      "summary": "Persistent hand history analysis results. Stores statistical summaries from poker-review.py runs.",
+      "tags": [
+        "json",
+        "data",
+        "config"
+      ],
+      "complexity": "moderate",
+      "sizeLines": 148,
+      "language": "json",
+      "fileCategory": "config"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:scripts/refresh_daily.py",
+      "target": "file:data/tips.json",
+      "type": "reads_from",
+      "direction": "directed",
+      "weight": 0.7
+    },
+    {
+      "source": "file:scripts/refresh_daily.py",
+      "target": "file:data/analysis_history.json",
+      "type": "reads_from",
+      "direction": "directed",
+      "weight": 0.7
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:style.css",
+      "type": "imports",
+      "direction": "directed",
+      "weight": 0.7
+    },
+    {
+      "source": "file:analysis.html",
+      "target": "file:style.css",
+      "type": "imports",
+      "direction": "directed",
+      "weight": 0.7
+    },
+    {
+      "source": "file:archive.html",
+      "target": "file:style.css",
+      "type": "imports",
+      "direction": "directed",
+      "weight": 0.7
+    },
+    {
+      "source": "file:philosophy.html",
+      "target": "file:style.css",
+      "type": "imports",
+      "direction": "directed",
+      "weight": 0.7
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:analysis.html",
+      "type": "related",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:archive.html",
+      "type": "related",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:philosophy.html",
+      "type": "related",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "file:analysis.html",
+      "target": "file:index.html",
+      "type": "related",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "file:analysis.html",
+      "target": "file:archive.html",
+      "type": "related",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "file:analysis.html",
+      "target": "file:philosophy.html",
+      "type": "related",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "file:archive.html",
+      "target": "file:index.html",
+      "type": "related",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "file:archive.html",
+      "target": "file:analysis.html",
+      "type": "related",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "file:archive.html",
+      "target": "file:philosophy.html",
+      "type": "related",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "file:philosophy.html",
+      "target": "file:index.html",
+      "type": "related",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "file:philosophy.html",
+      "target": "file:analysis.html",
+      "type": "related",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "file:philosophy.html",
+      "target": "file:archive.html",
+      "type": "related",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "file:REQUIREMENTS.md",
+      "target": "file:index.html",
+      "type": "documents",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "file:REQUIREMENTS.md",
+      "target": "file:analysis.html",
+      "type": "documents",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "file:REQUIREMENTS.md",
+      "target": "file:archive.html",
+      "type": "documents",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "file:REQUIREMENTS.md",
+      "target": "file:philosophy.html",
+      "type": "documents",
+      "direction": "directed",
+      "weight": 0.5
+    },
+    {
+      "source": "file:REQUIREMENTS.md",
+      "target": "file:scripts/refresh_daily.py",
+      "type": "documents",
+      "direction": "directed",
+      "weight": 0.5
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:documentation",
+      "name": "Documentation",
+      "description": "Project documentation and requirements",
+      "nodeIds": [
+        "file:REQUIREMENTS.md"
+      ]
+    },
+    {
+      "id": "layer:web-pages",
+      "name": "Web Pages",
+      "description": "All HTML pages of the poker strategy site",
+      "nodeIds": [
+        "file:index.html",
+        "file:analysis.html",
+        "file:archive.html",
+        "file:philosophy.html"
+      ]
+    },
+    {
+      "id": "layer:styles",
+      "name": "Styles",
+      "description": "CSS styling system",
+      "nodeIds": [
+        "file:style.css"
+      ]
+    },
+    {
+      "id": "layer:data",
+      "name": "Data & Configuration",
+      "description": "JSON data files",
+      "nodeIds": [
+        "file:data/tips.json",
+        "file:data/analysis_history.json"
+      ]
+    },
+    {
+      "id": "layer:scripts",
+      "name": "Automation Scripts",
+      "description": "Cron-driven Python scripts",
+      "nodeIds": [
+        "file:scripts/refresh_daily.py"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Project Overview",
+      "description": "Start with REQUIREMENTS.md to understand the full scope of the poker strategy site.",
+      "nodeIds": [
+        "file:REQUIREMENTS.md"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Landing Page",
+      "description": "Index page is the main hub linking to all sections.",
+      "nodeIds": [
+        "file:index.html"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "Style System",
+      "description": "Dark theme stylesheet (600 lines) defines the visual identity across all pages.",
+      "nodeIds": [
+        "file:style.css"
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Strategy Pages",
+      "description": "Analysis, archive, and philosophy pages provide different views into poker knowledge.",
+      "nodeIds": [
+        "file:analysis.html",
+        "file:archive.html",
+        "file:philosophy.html"
+      ]
+    },
+    {
+      "order": 5,
+      "title": "Data Layer",
+      "description": "JSON data files power the daily tips and analysis history.",
+      "nodeIds": [
+        "file:data/tips.json",
+        "file:data/analysis_history.json"
+      ]
+    },
+    {
+      "order": 6,
+      "title": "Cron Automation",
+      "description": "Daily tip refresh via Hermes cron. Reads JSON data and updates the site.",
+      "nodeIds": [
+        "file:scripts/refresh_daily.py"
+      ]
+    }
+  ]
+}
