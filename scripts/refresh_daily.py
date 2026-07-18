@@ -176,11 +176,20 @@ def main():
     updated_files = []
 
     # ── 1. Update tips.json ────────────────────────────────────────
-    tips_data = load_json(TIPS_JSON)
-    if "tips" not in tips_data:
-        tips_data["tips"] = []
+def get_date(t):
+    return t.get("date") or t.get("day", "")
 
-    existing_dates = {t["date"] for t in tips_data["tips"]}
+    tips_data = load_json(TIPS_JSON)
+    if isinstance(tips_data, list):
+        # Flat list format — wrap for internal use, save back as list
+        tip_list = tips_data
+        tips_data = {"tips": tip_list, "__list_format": True}
+        existing_dates = {get_date(t) for t in tip_list}
+    else:
+        tip_list = tips_data.get("tips", [])
+        if "tips" not in tips_data:
+            tips_data["tips"] = []
+        existing_dates = {get_date(t) for t in tips_data["tips"]}
 
     if today_str not in existing_dates:
         history = parse_tip_history()
@@ -206,7 +215,9 @@ def main():
             "category": category,
         }
         tips_data["tips"].append(new_tip)
-        save_json(TIPS_JSON, tips_data)
+        # Save in original format
+        save_target = tips_data["tips"] if tips_data.get("__list_format") else tips_data
+        save_json(TIPS_JSON, save_target)
         updated_files.append("data/tips.json")
         print(f"Appended new tip for {today_str}: {title}")
     else:
