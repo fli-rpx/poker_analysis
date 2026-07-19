@@ -2,6 +2,7 @@
 """Generate daily-tips.html from data/tips.json"""
 import json
 from pathlib import Path
+from datetime import datetime
 
 ROOT = Path(__file__).resolve().parent.parent
 TIPS_PATH = ROOT / "data" / "tips.json"
@@ -16,6 +17,11 @@ CAT_MAP = {"Mental Game": "Psychology", "Bankroll": "Sessions", "Tournament": "L
            "Positional": "Preflop"}
 for t in tips:
     t["cat"] = CAT_MAP.get(t["category"], t["category"])
+
+# Detect today's tip for "Today's Tip" section
+today_date = datetime.now().strftime("%b %-d").replace(" 0", " ")
+today_tip = next((t for t in tips if t.get("date", "").lower() == today_date.lower()), None)
+today_day = today_tip["day"] if today_tip else None
 
 COLS = {
     "Preflop": ('#d4af37', 'rgba(212,175,55,0.12)'),
@@ -89,6 +95,8 @@ a{color:var(--gold);text-decoration:none}
 .tip-summary p{margin-bottom:1.25rem}
 .tip-summary p:last-child{margin-bottom:0}
 .gold-sep{display:block;text-align:center;color:var(--gold-dim);font-size:.9rem;letter-spacing:.5em;margin:1.75rem 0;user-select:none}
+.today-banner{background:linear-gradient(135deg,rgba(212,175,55,0.2),rgba(212,175,55,0.08));border:1px solid var(--gold-dim);border-radius:10px;padding:.75rem 1rem;margin-bottom:1.25rem;font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);text-align:center;box-shadow:0 0 20px rgba(212,175,55,0.1)}
+.today-tag{display:inline-block;font-size:.6rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding:.15rem .4rem;border-radius:3px;background:var(--gold);color:#0a0a0a;margin-left:.35rem;vertical-align:middle;line-height:1.2}
 .overlay{display:none}
 @media(max-width:900px){
 .mobile-toggle{display:inline-block}
@@ -104,17 +112,18 @@ a{color:var(--gold);text-decoration:none}
 
 COLORS_JSON = json.dumps({k: list(v) for k, v in COLS.items()})
 
-JS = f"""
+JS = f"""\
 var TIPS = {tips_json_raw};
 var CM = {COLORS_JSON};
-var activeFilter="ALL",activeId=null;
-var fG=document.getElementById("filterGroup"),sI=document.getElementById("searchInput"),tL=document.getElementById("tipList"),cI=document.getElementById("contentInner"),eS=document.getElementById("emptyState"),tC=document.getElementById("tipCount"),sB=document.getElementById("sidebar"),oL=document.getElementById("overlay"),mT=document.getElementById("mobileToggle");
+var TD = {today_day if today_day else "null"};
+var activeFilter="ALL",activeId=TD;
+var fG=document.getElementById("filterGroup"),sI=document.getElementById("searchInput"),tL=document.getElementById("tipList"),cI=document.getElementById("contentInner"),eS=document.getElementById("emptyState"),tC=document.getElementById("tipCount"),sB=document.getElementById("sidebar"),oL=document.getElementById("overlay"),mT=document.getElementById("mobileToggle"),tB=document.getElementById("todayBanner");
 function n(s){{return(s||"").toLowerCase().replace(/[^a-z0-9]/g,"")}}
 function getTips(){{var q=n(sI.value);return TIPS.filter(function(t){{return(activeFilter==="ALL"||t.cat.toUpperCase()===activeFilter)&&(!q||n(t.title).indexOf(q)!==-1||n(t.summary).indexOf(q)!==-1)}})}}
 function fmt(t){{return t.split("\\\\n\\\\n").map(function(p){{return"<p>"+p.replace(/\\\\n/g,"<br/>")+"</p>"}}).join("")}}
 function badge(cat,cls){{var m=CM[cat]||CM.Preflop;return'<span class="'+cls+'" style="color:'+m[0]+";background:"+m[1]+";border:1px solid "+m[0]+'30;">'+cat+"</span>"}}
-function rList(){{var tips=getTips();tC.textContent=tips.length;tL.innerHTML=tips.map(function(t){{return'<div class="tip-item'+(activeId===t.day?" active":"")+'" data-day="'+t.day+'"><div class="day-badge">'+t.day+'</div><div class="tip-meta"><div class="tip-item-title">'+t.title.replace(/"/g,"&quot;")+'</div>'+badge(t.cat,"badge")+"</div></div>"}}).join("");if(activeId!==null){{var el=tL.querySelector('[data-day="'+activeId+'"]');if(el)el.scrollIntoView({{block:"nearest",behavior:"smooth"}})}}}}
-function rContent(t){{if(!t)return;var m=CM[t.cat]||CM.Preflop;cI.innerHTML='<article class="tip-header"><span class="tip-cat-badge" style="color:'+m[0]+";background:"+m[1]+";border:1px solid "+m[0]+'30;">'+t.cat+'</span><div class="tip-date-line">'+t.date+'</div><h2 class="tip-title">'+t.title+'</h2></article><div class="gold-sep">&#9670; &#9670; &#9670;</div><div class="tip-summary">'+fmt(t.summary)+"</div>";eS.style.display="none";cI.style.display="block";cI.style.animation="none";void cI.offsetHeight;cI.style.animation=""}}
+function rList(){{var tips=getTips();tC.textContent=tips.length;tL.innerHTML=tips.map(function(t){{return'<div class="tip-item'+(activeId===t.day?" active":"")+'" data-day="'+t.day+'"><div class="day-badge">'+(t.day===TD?"★":t.day)+'</div><div class="tip-meta"><div class="tip-item-title">'+t.title.replace(/"/g,"&quot;")+'</div>'+badge(t.cat,"badge")+(t.day===TD?' <span class="today-tag">TODAY</span>':"")+'</div></div>'}}).join("");if(activeId!==null){{var el=tL.querySelector('[data-day="'+activeId+'"]');if(el)el.scrollIntoView({{block:"nearest",behavior:"smooth"}})}}}}
+function rContent(t){{if(!t)return;var m=CM[t.cat]||CM.Preflop;var banner=t.day===TD?'<div class="today-banner">&#9733; TODAY\'S TIP</div>':"";cI.innerHTML=banner+'<article class="tip-header"><span class="tip-cat-badge" style="color:'+m[0]+";background:"+m[1]+";border:1px solid "+m[0]+'30;">'+t.cat+'</span><div class="tip-date-line">'+t.date+'</div><h2 class="tip-title">'+t.title+'</h2></article><div class="gold-sep">&#9670; &#9670; &#9670;</div><div class="tip-summary">'+fmt(t.summary)+"</div>";eS.style.display="none";cI.style.display="block";cI.style.animation="none";void cI.offsetHeight;cI.style.animation=""}}
 function selectTip(d){{if(activeId===d){{activeId=null;eS.style.display="flex";cI.style.display="none";rList();return}}activeId=d;rContent(TIPS.find(function(t){{return t.day===d}}));rList();if(window.innerWidth<=900)closeS()}}
 function openS(){{sB.classList.add("open");oL.classList.add("open")}}
 function closeS(){{sB.classList.remove("open");oL.classList.remove("open")}}
@@ -124,7 +133,7 @@ tL.addEventListener("click",function(e){{var i=e.target.closest(".tip-item");if(
 mT.addEventListener("click",openS);
 oL.addEventListener("click",closeS);
 document.addEventListener("keydown",function(e){{if(e.key==="Escape")closeS()}});
-rList();
+rList();if(TD){{var t=TIPS.find(function(x){{return x.day===TD}});if(t)rContent(t)}}
 """
 
 HTML = f"""<!DOCTYPE html>
