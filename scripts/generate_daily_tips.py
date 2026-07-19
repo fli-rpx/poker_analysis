@@ -39,7 +39,7 @@ for c in CATS:
     act = ' active' if c == 'ALL' else ''
     filter_btns += f'<button class="filter-btn{act}" data-filter="{c}">{c}</button>\n'
 
-tips_json_raw = json.dumps(tips, ensure_ascii=False)
+tips_json_raw = json.dumps(tips, ensure_ascii=True)
 
 # All the Tailwind-like CSS
 CSS = """
@@ -117,13 +117,13 @@ var TIPS = {tips_json_raw};
 var CM = {COLORS_JSON};
 var TD = {today_day if today_day else "null"};
 var activeFilter="ALL",activeId=TD;
-var fG=document.getElementById("filterGroup"),sI=document.getElementById("searchInput"),tL=document.getElementById("tipList"),cI=document.getElementById("contentInner"),eS=document.getElementById("emptyState"),tC=document.getElementById("tipCount"),sB=document.getElementById("sidebar"),oL=document.getElementById("overlay"),mT=document.getElementById("mobileToggle"),tB=document.getElementById("todayBanner");
+var fG=document.getElementById("filterGroup"),sI=document.getElementById("searchInput"),tL=document.getElementById("tipList"),cI=document.getElementById("contentInner"),eS=document.getElementById("emptyState"),tC=document.getElementById("tipCount"),sB=document.getElementById("sidebar"),oL=document.getElementById("overlay"),mT=document.getElementById("mobileToggle");
 function n(s){{return(s||"").toLowerCase().replace(/[^a-z0-9]/g,"")}}
 function getTips(){{var q=n(sI.value);return TIPS.filter(function(t){{return(activeFilter==="ALL"||t.cat.toUpperCase()===activeFilter)&&(!q||n(t.title).indexOf(q)!==-1||n(t.summary).indexOf(q)!==-1)}})}}
-function fmt(t){{return t.split("\\\\n\\\\n").map(function(p){{return"<p>"+p.replace(/\\\\n/g,"<br/>")+"</p>"}}).join("")}}
+function fmt(t){{return t.split("\\n\\n").map(function(p){{return"<p>"+p.replace(/\\n/g,"<br/>")+"</p>"}}).join("")}}
 function badge(cat,cls){{var m=CM[cat]||CM.Preflop;return'<span class="'+cls+'" style="color:'+m[0]+";background:"+m[1]+";border:1px solid "+m[0]+'30;">'+cat+"</span>"}}
-function rList(){{var tips=getTips();tC.textContent=tips.length;tL.innerHTML=tips.map(function(t){{return'<div class="tip-item'+(activeId===t.day?" active":"")+'" data-day="'+t.day+'"><div class="day-badge">'+(t.day===TD?"★":t.day)+'</div><div class="tip-meta"><div class="tip-item-title">'+t.title.replace(/"/g,"&quot;")+'</div>'+badge(t.cat,"badge")+(t.day===TD?' <span class="today-tag">TODAY</span>':"")+'</div></div>'}}).join("");if(activeId!==null){{var el=tL.querySelector('[data-day="'+activeId+'"]');if(el)el.scrollIntoView({{block:"nearest",behavior:"smooth"}})}}}}
-function rContent(t){{if(!t)return;var m=CM[t.cat]||CM.Preflop;var banner=t.day===TD?'<div class="today-banner">&#9733; TODAY\'S TIP</div>':"";cI.innerHTML=banner+'<article class="tip-header"><span class="tip-cat-badge" style="color:'+m[0]+";background:"+m[1]+";border:1px solid "+m[0]+'30;">'+t.cat+'</span><div class="tip-date-line">'+t.date+'</div><h2 class="tip-title">'+t.title+'</h2></article><div class="gold-sep">&#9670; &#9670; &#9670;</div><div class="tip-summary">'+fmt(t.summary)+"</div>";eS.style.display="none";cI.style.display="block";cI.style.animation="none";void cI.offsetHeight;cI.style.animation=""}}
+function rList(){{var tips=getTips();tC.textContent=tips.length;tL.innerHTML=tips.map(function(t){{return'<div class="tip-item'+(activeId===t.day?" active":"")+'" data-day="'+t.day+'"><div class="day-badge">'+(t.day===TD?"\\u2605":t.day)+'</div><div class="tip-meta"><div class="tip-item-title">'+t.title.replace(/"/g,"&quot;")+'</div>'+badge(t.cat,"badge")+(t.day===TD?' <span class="today-tag">TODAY</span>':"")+'</div></div>'}}).join("");if(activeId!==null){{var el=tL.querySelector('[data-day="'+activeId+'"]');if(el)el.scrollIntoView({{block:"nearest",behavior:"smooth"}})}}}}
+function rContent(t){{if(!t)return;var m=CM[t.cat]||CM.Preflop;var banner=t.day===TD?'<div class="today-banner">\\u2605 TODAY TIP</div>':"";cI.innerHTML=banner+'<article class="tip-header"><span class="tip-cat-badge" style="color:'+m[0]+";background:"+m[1]+";border:1px solid "+m[0]+'30;">'+t.cat+'</span><div class="tip-date-line">'+t.date+'</div><h2 class="tip-title">'+t.title+'</h2></article><div class="gold-sep">\\u25c6 \\u25c6 \\u25c6</div><div class="tip-summary">'+fmt(t.summary)+"</div>";eS.style.display="none";cI.style.display="block";cI.style.animation="none";void cI.offsetHeight;cI.style.animation=""}}
 function selectTip(d){{if(activeId===d){{activeId=null;eS.style.display="flex";cI.style.display="none";rList();return}}activeId=d;rContent(TIPS.find(function(t){{return t.day===d}}));rList();if(window.innerWidth<=900)closeS()}}
 function openS(){{sB.classList.add("open");oL.classList.add("open")}}
 function closeS(){{sB.classList.remove("open");oL.classList.remove("open")}}
@@ -135,6 +135,12 @@ oL.addEventListener("click",closeS);
 document.addEventListener("keydown",function(e){{if(e.key==="Escape")closeS()}});
 rList();if(TD){{var t=TIPS.find(function(x){{return x.day===TD}});if(t)rContent(t)}}
 """
+
+# fmt fix: the f-string doubles braces. The JS function needs double-backslash for \\n
+# In the f-string, \\\\n → \\n → JS sees \\n which is a newline escape
+# And \\n\\n → \\n\\n → JS sees \\n\\n which is double newline (paragraph separator)
+# But the ensure_ascii=True JSON already has \\uXXXX escapes for Unicode
+# The summary stored in TIPS has literal \\n\\n (from the JSON file) → JS sees \\n\\n → we split on "\\n\\n"
 
 HTML = f"""<!DOCTYPE html>
 <html lang="en">
