@@ -162,6 +162,11 @@ def git_commit_and_push(files_to_add, commit_msg):
 
 # ─── Main ───────────────────────────────────────────────────────────
 
+def get_date(t):
+    """Date key for a tip entry (new entries use `date`, legacy use `day`)."""
+    return t.get("date") or t.get("day", "")
+
+
 def main():
     today_str = datetime.now().strftime("%Y-%m-%d")
 
@@ -176,9 +181,6 @@ def main():
     updated_files = []
 
     # ── 1. Update tips.json ────────────────────────────────────────
-def get_date(t):
-    return t.get("date") or t.get("day", "")
-
     tips_data = load_json(TIPS_JSON)
     if isinstance(tips_data, list):
         # Flat list format — wrap for internal use, save back as list
@@ -191,7 +193,15 @@ def get_date(t):
             tips_data["tips"] = []
         existing_dates = {get_date(t) for t in tips_data["tips"]}
 
-    if today_str not in existing_dates:
+    # Tip entries store short dates ("Oct 2"); today_str is ISO ("2026-10-02").
+    # Accept either form so an already-synced tip is not duplicated.
+    try:
+        today_short = datetime.strptime(today_str, "%Y-%m-%d").strftime("%b %-d")
+    except ValueError:
+        today_short = today_str
+    tip_already_present = (today_str in existing_dates) or (today_short in existing_dates)
+
+    if not tip_already_present:
         history = parse_tip_history()
         tip_info = history.get(today_str)
 
